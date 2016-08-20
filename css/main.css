@@ -280,3 +280,170 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+/*custom*/
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%}
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, into, menu, nav, section, summary {
+    display: block;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    font-family: 'usual', 'Usual', Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    color: #adb3b7;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -ms-overflow-style: none;
+}
+body.no-scroll {
+    overflow: hidden !important;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+}
+.vertical-scroll {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+intro {
+    position: relative;
+    white-space: nowrap;
+    display: inline-block;
+    height: 100vh;
+    width: auto;
+}
+section, footer {
+    position: relative;    
+    display: inline-block;
+    padding: 12vh 0;
+    height: 100%;
+    margin-right: -0.35em;
+    vertical-align: top;
+}
+#hello-section{
+    background-color: #010101;
+    opacity: 0.5;
+
+    }
+#do-section{
+    background-color: #000000;
+}
+#blog-section{
+    background-color: #ba9077;
+}
+
+#introduction {
+    background-image: url("../img/1.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-right: 1em;
+    padding-top: 0.1em;
+}
+.section-logo{
+    padding-top: 0px !important;
+}
+
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    /*background: hsla(350,50%,50%,0.3);*/
+}
+
+.rows-text.large, .rows-text .large {
+    font-size: 2.5em;
+    font-size: 12vw;
+    top: 0;
+    opacity: 1 !important;
+}
+
+
+.logo-flexible {
+    height: 101%;
+    /*width: auto;*/
+    width: 316vh;
+    display: block;
+    margin: 0 6vw 0 2vw;
+}
+.logo-flexible-mobile {
+    display: none;
+}
+.header {
+    position: fixed;
+    height:50px;
+    width: 100%;
+    top: -50px;
+    background:transparent;
+    margin:0px auto;
+
+
+}
+.logo{
+    position: relative;
+    margin-top: 1vh;
+    margin-left: 2vh;
+    height: 5vh;
+    width: 10vw;
+    background-color: #FFFFFF;
+}
+
+section.min-width, footer.min-width {
+    min-width: 100vw;
+}
+.somecontent{
+    min-height: 1000vw;
+}
+.main{
+position: relative;
+height: 1000px;
+background-color: #5a5c51;
+width: 100%;
+}
+
+/*MOBILE AND SMALL SCREEN*/
+@media only screen and (max-width: 48em) {
+    body {
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-width: 18.75em;
+}
+section, footer {
+    display: block;
+    height: auto;
+    min-height: 30vh;
+    width: 100%;
+    overflow: hidden;
+    margin-right: 0;
+    padding: 3em 0 4em;
+}
+.logo-flexible {
+    display: none;
+}
+.logo-flexible-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+
+}
+
+
