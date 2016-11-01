@@ -1,0 +1,29 @@
+
+.airmaxsvg{
+	stroke:none;
+}
+.animate_airmax{
+	stroke: #FFFFFF;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration: 1;
+    animation-name: DrawLine;
+    stroke-dashArray: 10000px 10000px;
+    stroke-dashoffset: 10000px;
+    animation-duration: 5s, 5s;
+      animation-delay: 0, 0;
+
+}
+
+.animated > .cls-1{
+	fill: black;
+}
+
+
+
+
+
+
+
+
+

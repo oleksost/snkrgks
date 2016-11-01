@@ -1,4 +1,9 @@
-var previous_vertical;
+console.log("Hallo");
+
+var riched_end_intro=false;
+
+var backgrounds=["img/3.png", "img/2.png","img/4.png","img/1.png" ];
+
 
 (function(window, document) {
     var prefix = "", _addEventListener, support;
@@ -52,33 +57,6 @@ else {
 }
 }
 )(window, document);
-    
-    
-
-
-// add color-theme-class to document
-$(function () {
-	var theme = ['red', 'yellow', 'green', 'blue'];
-	var theme = theme[Math.floor(Math.random() * (4 - 1 + 1))];
-	$('#body').addClass(theme + '-theme');
-});
-
-
-// Scroll animation for elements
-$(function () {
-	var unfixEl = document.getElementById('boana-pattern');
-
-	$(window).scroll(function() {
-		
-		var screenPosition = unfixEl.getBoundingClientRect();
-		if (Math.round(screenPosition.left) <= 0) {
-			$('#boana-pattern').addClass('unfix');
-		}
-		else {
-			$('#boana-pattern').removeClass('unfix');
-		}
-	});
-});
 
 
 /*
@@ -101,56 +79,198 @@ $(window).scroll(function() {
 });
 */
 
-addWheelListener( document, function( e ) {
-    //console.log( e.deltaY < 0 ? "up" : "down" );
-    var riched_end_main=false;
+
+function header_show(){
+  $("#header").css({top: 0});
+}
+
+function header_hide(){
+  if ($("#header").position().top==0){
+    $("#header").css({top: "-100px"});
+  }
+
+
+}
+
+addWheelListener( window, function( e ) {
+
+    console.log($("#header").outerHeight());
+
     var position = $('intro').position();
     var new_position=position.left;
+
+    if (riched_end_intro==true && $(window).scrollTop()>=$('#main').offset().top-100){
+      header_show();
+    }else if ($(window).scrollTop()<$('#main').offset().top-100){
+      header_hide();
+    }
+
     if(!($(window).scrollTop()>0)){
     	var new_position=position.left-e.deltaY;
     }
 
-    if(new_position>0){new_position=0;} else 
+    if(new_position>0){  new_position=0;} else
 
-    if (-new_position>=$('intro').innerWidth()-$(window).width())
+    if ((-new_position>=$('intro').innerWidth()-$(window).width())&&!riched_end_intro)
     {
-    	//RICHED THE END OF MAIN
-
-      //animate header appearance
-      $(".header").animate({"top": "0px"}, 500);
-
-      //calculate new position
-    	new_position=-$('intro').innerWidth()+$(window).width();
-    	riched_end_main=true;
-
+        $("body").removeClass("horizontal-scroll");
+        //calculate new position
+        new_position=-$('intro').innerWidth()+$(window).width();
+        $('intro').css({left: new_position});
+        riched_end_intro = true;
+        $("#introduction").css("visibility", "hidden");
     }
+    if(!riched_end_intro){
+      $('intro').css({left: new_position});
+     }
+    if((!riched_end_intro) && !($(window).scrollTop()>0) && !(e.deltaY<1)){
+    e.preventDefault();
+        console.log("preventing default");
+    }
+}
+    //,{passive: true}
+);
 
+
+
+/*
+$(function() {
+   $("html, body, *").mousewheel(function(event, delta) {
+
+       console.log($(document).scrollLeft());
+
+       if (!riched_end_intro){
+           this.scrollLeft -= (delta );
+           this.scrollRight -= (delta);
+           event.preventDefault();
+       }
+       if ($(document).scrollLeft()==$(document).width()-$(window).width()){
+           riched_end_intro=true;
+           $("#main").show();
+       }
+
+   });
+});
+*/
+
+function resize(){
+    if(riched_end_intro){
+    //set new position for the intro part if resized
+    var position=$('intro').position();
+    var new_position= position.left + ($( window ).width() - (position.left+$('intro').width()));
     $('intro').css({left: new_position});
-    if(!riched_end_main&& !($(window).scrollTop()>0)){
-    e.preventDefault(); 
+  }
+    if ($("#wwd-section").hasClass("altitude_expand")){
+        $('html, body').animate({
+        scrollTop: $("#wwd-section").offset().top - $("#header").outerHeight()-20
+    }, 1000);
+
     }
-} );
+
+}
 
 
+$( window ).resize(function() {
+  resize();
+});
+
+
+
+$(document).ready(function() {
+  for (i in backgrounds){
+    pfad='url('+backgrounds[i]+') no-repeat';
+    $('<div />').attr('id', i).css({"background": pfad}).appendTo('#background');
+
+  }
 //changing background pics periodicaly
-/*$(function() {
-  var introduction = $('#introduction');
-  var backgrounds = ['url(img/1.png)', 'url(img/2.png)'];
-var current = 0;
+$(function() {
+  var current = Math.floor((Math.random() * (backgrounds.length)) + 0);
 
+  $('#'+current).css({opacity:1});
+  var next=current;
 function nextBackground() {
-  introduction.animate({opacity: 0}, 'slow', function() {
-        $(this)
-            .css('background', backgrounds[current = ++current % backgrounds.length])
-            .animate({opacity: 1});
-    });
- 
+  var introduction = $('#'+current);
 
+  if (current==backgrounds.length-1){
+     current=0;
+     next=0;
+   }else{
+    current++;
+    next++;
+   }
+  introduction.animate({opacity: 0}, 'slow', function() {
+        $('#'+next).animate({opacity: 1}, 'slow');
+    });
  setTimeout(nextBackground, 5000);
  }
  setTimeout(nextBackground, 5000);
-   introduction.css('background', backgrounds[0]);
  });
 
-*/
+});
+
+
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;
+}
+
+$("#more_altitude").click(function(){
+    console.log($("#wwd-section").offset().top);
+    console.log("Click");
+    $("#kreis").addClass("remove");
+
+
+
+    $('html, body').animate({
+        scrollTop: $("#wwd-section").offset().top - $("#header").outerHeight()-20
+    }, 1000);
+
+    $("#wwd-section").addClass("altitude_expand");
+    $("#description-wwd").addClass("vertical-scroll");
+    $("body").addClass("deactivate");
+    $(".hidden_altitude").show();
+    $("#container-close").show();
+    $("#more_altitude").hide();
+
+
+    //$("body").toggleClass("noScroll")
+
+})
+
+//===========CONTROLS=============//
+
+$(".menue-button").click(function(){
+     riched_end_intro=true;
+     resize();
+     //$("#main").show();
+     hide_wwd();
+});
+
+$("#close").click(function () {
+     hide_wwd();
+
+
+})
+
+function hide_wwd(){
+    $("body").removeClass("deactivate");
+     $(".hidden_altitude").hide();
+     $("#container-close").hide();
+     $("#wwd-section").removeClass("altitude_expand");
+     $("#description-wwd").removeClass("vertical-scroll");
+     $("#kreis").removeClass("remove");
+     $("#more_altitude").show();
+}
+
+
+window.onload=function(){ window.scrollTo(0,0); console.log("wind");};
+
+$( document ).ready(function() {
+    window.scrollTo(0,0);
+    console.log("doc");
+})
+
+
 
