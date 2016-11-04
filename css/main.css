@@ -626,11 +626,14 @@ footer.min-width {
     height: 100vh;
 }
 
+/*==========WWD=========*/
+
+
 #wwd-section {
     background-color: #52524e;
     position: relative;
     width: 100%;
-    max-height: 70vh;
+    height: auto;
 
     -webkit-transition: opacity 0.5s, height 2s;
     -moz-transition: opacity 0.5s, height 2s;
@@ -638,14 +641,56 @@ footer.min-width {
     transition: opacity 0.5s, height 2s;
 }
 
+#container-close{
 
-#wwd-section img{
-    max-width:50vm;
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    width: 3rem;
+    height: 3rem;
+    color: black;
+    display: none;
+}
+#wwd-section *{
+ -webkit-transition:  width 1s , left 1s,  height 1s, max-height 1s;
+    -moz-transition:  width 1s , left 1s, height 1s, max-height 1s;
+    -o-transition: width 1s , left 1s, height 1s, max-height 1s;
+    transition: width 1s , left 1s, height 1s, max-height 1s;
+}
+
+#kreis-container{
+    position: relative;
+    width: 50vw;
+    left: 0;
+
+}
+
+
+#container-speach{
+    position: absolute;
+    opacity: 1;
+    z-index: 1000;
+    top: 50%;
+    left:50%;
+
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+#container-speach #saying{
+    text-align: left;
+}
+#container-speach #author{
+    text-align: right;
+}
+
+#kreis, #close{
+    max-width: 50vw;
     height: 120%;
     position: absolute;
     z-index: 1000;
     top: 50%;
-    left: 25%;
+    left: 50%;
     -webkit-transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
@@ -656,16 +701,12 @@ footer.min-width {
     -o-transition: opacity 0.5s, left 1s, height 2s;
     transition: opacity 0.5s, left 1s, height 2s;
 }
-#container-close{
-
-    position: absolute;
-    right: 5px;
-    top: 13px;
-    width: 50px;
-    height: 50px;
-    color: black;
-    display: none;
+#close {
+    z-index: 1000;
 }
+
+/*==========================================*/
+
 
 #blog-section {
     position: relative;
@@ -721,13 +762,6 @@ footer.min-width {
 .vid-container{
     height: 100%;
 }
-
-#wwd-section .description-container{
-    float: right;
-    margin-left: 50vw;
-
-}
-
 
 .vid-container iframe{
     position: relative;
@@ -1116,8 +1150,9 @@ footer.min-width {
 
 
 .altitude_expand{
-
 }
+
+
 .altitude_expand #description-wwd{
  padding-right: 5rem;
 }
@@ -1131,7 +1166,15 @@ footer.min-width {
 }
 
 .remove{
-    left:-500px !important;
+    width: 0 !important;
+    left: -500px;
+}
+.remove #kreis, .remove #container-speach{
+    left: -500px;
+
+}
+.remove #container-speach{
+    opacity: 0;
 }
 
 .hidden_altitude{

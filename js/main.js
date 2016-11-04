@@ -94,7 +94,7 @@ function header_hide(){
 
 addWheelListener( window, function( e ) {
 
-    console.log($("#header").outerHeight());
+    //console.log($("#header").outerHeight());
 
     var position = $('intro').position();
     var new_position=position.left;
@@ -125,7 +125,6 @@ addWheelListener( window, function( e ) {
      }
     if((!riched_end_intro) && !($(window).scrollTop()>0) && !(e.deltaY<1)){
     e.preventDefault();
-        console.log("preventing default");
     }
 }
     //,{passive: true}
@@ -219,17 +218,18 @@ function preventDefault(e) {
 $("#more_altitude").click(function(){
     console.log($("#wwd-section").offset().top);
     console.log("Click");
-    $("#kreis").addClass("remove");
-
-
 
     $('html, body').animate({
         scrollTop: $("#wwd-section").offset().top - $("#header").outerHeight()-20
     }, 1000);
+    $("body").addClass("deactivate");
+    $("#kreis-container").addClass("remove");
+    max_height=$("#wwd-section").height();
+    $("#wwd-section").css("max-height", max_height);
+    $("#wwd-section").css("min-height", max_height);
 
     $("#wwd-section").addClass("altitude_expand");
     $("#description-wwd").addClass("vertical-scroll");
-    $("body").addClass("deactivate");
     $(".hidden_altitude").show();
     $("#container-close").show();
     $("#more_altitude").hide();
@@ -260,17 +260,44 @@ function hide_wwd(){
      $("#container-close").hide();
      $("#wwd-section").removeClass("altitude_expand");
      $("#description-wwd").removeClass("vertical-scroll");
-     $("#kreis").removeClass("remove");
+     $("#kreis-container").removeClass("remove");
      $("#more_altitude").show();
 }
 
 
-window.onload=function(){ window.scrollTo(0,0); console.log("wind");};
+var counter =0;
 
-$( document ).ready(function() {
-    window.scrollTo(0,0);
-    console.log("doc");
-})
+(function(){
+    if (counter==phraseList.length){counter=0;}
+    text=phraseList[counter].saying;
+    author=phraseList[counter].author;
+    console.log("changing texts");
+    $("#container-speach").animate({opacity:0},400, function() {
+        $("#container-speach #saying").text(text);
+        $("#container-speach #author").text(author);
+        $("#container-speach").animate({opacity:1},400, function() {})
+        counter=counter +1;
+
+    });
+
+    setTimeout(arguments.callee, 5000);
+
+
+})();
+
+
+
+
+
+
+/*
+window.onload=function(){ window.scrollTo(0,0); console.log("wind");};
+*/
+
+$(window).on('beforeunload', function() {
+    $("body").addClass("horizontal-scroll");
+    $(window).scrollTop(0);
+});
 
 
 
