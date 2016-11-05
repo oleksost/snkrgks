@@ -1,9 +1,12 @@
-console.log("Hallo");
-
 var riched_end_intro=false;
-
-var backgrounds=["img/3.png", "img/2.png","img/4.png","img/1.png" ];
-
+var backgrounds=["img/2.png","img/1.png" ];
+var aChildren = $("#header .menu-container").children();
+var aArray = [];
+for (var i=0; i < aChildren.length; i++) {
+        var aChild = aChildren[i];
+        var ahref = $(aChild).attr('href');
+        aArray.push(ahref);
+    }
 
 (function(window, document) {
     var prefix = "", _addEventListener, support;
@@ -59,27 +62,6 @@ else {
 )(window, document);
 
 
-/*
-$(window).scroll(function() {
-	console.log(previous_vertical);
-   if($(window).scrollLeft() + $(window).innerWidth() == $(document).innerWidth()) {
-       //alert("bottom!");
-       //scrollConverter.deactivate();
-       $("body").addClass("vertical-scroll");
-       scrollConverter.deactivate();
-   }
-   if(($(window).scrollTop()==0)&&($(window).scrollTop()-previous_vertical<0)) {
-       //alert("bottom!");
-       //scrollConverter.deactivate();
-       $("body").removeClass("vertical-scroll");
-       scrollConverter.activate();
-   }
-   previous_vertical=($(window).scrollTop());
-
-});
-*/
-
-
 function header_show(){
   $("#header").css({top: 0});
 }
@@ -93,64 +75,59 @@ function header_hide(){
 }
 
 addWheelListener( window, function( e ) {
-
-    //console.log($("#header").outerHeight());
+    if (!riched_end_intro) {
 
     var position = $('intro').position();
-    var new_position=position.left;
+    var new_position = position.left;
 
-    if (riched_end_intro==true && $(window).scrollTop()>=$('#main').offset().top-100){
-      header_show();
-    }else if ($(window).scrollTop()<$('#main').offset().top-100){
-      header_hide();
-    }
+        if (!($(window).scrollTop() > 0)) {
+            var new_position = position.left - e.deltaY;
+        }
 
-    if(!($(window).scrollTop()>0)){
-    	var new_position=position.left-e.deltaY;
-    }
+        if (new_position > 0) {
+            new_position = 0;
+        } else if ((-new_position >= $('intro').innerWidth() - $(window).width()) && !riched_end_intro) {
+            $("body").removeClass("horizontal-scroll");
+            //calculate new position
+            new_position = -$('intro').innerWidth() + $(window).width();
+            $('intro').css({left: new_position});
+            riched_end_intro = true;
+        }
+        if (!riched_end_intro) {
+            $('intro').css({left: new_position});
+        }
+        if ((!riched_end_intro) && !($(window).scrollTop() > 0) && !(e.deltaY < 1)) {
+            e.preventDefault();
+        }
 
-    if(new_position>0){  new_position=0;} else
-
-    if ((-new_position>=$('intro').innerWidth()-$(window).width())&&!riched_end_intro)
-    {
-        $("body").removeClass("horizontal-scroll");
-        //calculate new position
-        new_position=-$('intro').innerWidth()+$(window).width();
-        $('intro').css({left: new_position});
-        riched_end_intro = true;
-        $("#introduction").css("visibility", "hidden");
-    }
-    if(!riched_end_intro){
-      $('intro').css({left: new_position});
-     }
-    if((!riched_end_intro) && !($(window).scrollTop()>0) && !(e.deltaY<1)){
-    e.preventDefault();
     }
 }
     //,{passive: true}
 );
 
+$(window).scroll(function() {
+    if (riched_end_intro) {
+         if ($(window).scrollTop() >= $('#main').offset().top - 100) {
+        header_show();
+        } else if ($(window).scrollTop() < $('#main').offset().top - 100) {
+        header_hide();
+        }
+        var windowPos = $(window).scrollTop() + 1; // get the offset of the window from the top of page
+        var windowHeight = $(window).height(); // get the height of the window
+        var docHeight = $(document).height();
 
-
-/*
-$(function() {
-   $("html, body, *").mousewheel(function(event, delta) {
-
-       console.log($(document).scrollLeft());
-
-       if (!riched_end_intro){
-           this.scrollLeft -= (delta );
-           this.scrollRight -= (delta);
-           event.preventDefault();
-       }
-       if ($(document).scrollLeft()==$(document).width()-$(window).width()){
-           riched_end_intro=true;
-           $("#main").show();
-       }
-
-   });
+        for (var i = aArray.length - 1; i >= 0; i--) {
+            var theID = aArray[i];
+            var divPos = Math.round($(theID).offset().top); // get the offset of the div from the top of page
+            var divHeight = Math.round($(theID).height()); // get the height of the div in question
+            if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+                $("a[href='" + theID + "']").addClass("nav-active");
+            } else {
+                $("a[href='" + theID + "']").removeClass("nav-active");
+            }
+        }
+    }
 });
-*/
 
 function resize(){
     if(riched_end_intro){
@@ -167,13 +144,9 @@ function resize(){
     }
 
 }
-
-
 $( window ).resize(function() {
   resize();
 });
-
-
 
 $(document).ready(function() {
   for (i in backgrounds){
@@ -207,7 +180,6 @@ function nextBackground() {
 
 });
 
-
 function preventDefault(e) {
   e = e || window.event;
   if (e.preventDefault)
@@ -216,8 +188,6 @@ function preventDefault(e) {
 }
 
 $("#more_altitude").click(function(){
-    console.log($("#wwd-section").offset().top);
-    console.log("Click");
 
     $('html, body').animate({
         scrollTop: $("#wwd-section").offset().top - $("#header").outerHeight()-20
@@ -254,6 +224,8 @@ $("#close").click(function () {
 
 })
 
+//======================================//
+
 function hide_wwd(){
     $("body").removeClass("deactivate");
      $(".hidden_altitude").hide();
@@ -271,7 +243,6 @@ var counter =0;
     if (counter==phraseList.length){counter=0;}
     text=phraseList[counter].saying;
     author=phraseList[counter].author;
-    console.log("changing texts");
     $("#container-speach").animate({opacity:0},400, function() {
         $("#container-speach #saying").text(text);
         $("#container-speach #author").text(author);
@@ -285,19 +256,11 @@ var counter =0;
 
 })();
 
-
-
-
-
-
-/*
-window.onload=function(){ window.scrollTo(0,0); console.log("wind");};
-*/
-
 $(window).on('beforeunload', function() {
     $("body").addClass("horizontal-scroll");
     $(window).scrollTop(0);
 });
+
 
 
 

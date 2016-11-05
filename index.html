@@ -16,7 +16,6 @@
 </head>
 
 <body class="horizontal-scroll">
-    <a name="home"></a>
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -87,19 +86,19 @@
             </div>
         <div id="menu-container-intro">
             <div id="menu-intro" class="menu-container vertical">
-                <a class="rows-text medium menu-button" href="#home">
+                <a class="rows-text medium menu-button" href="#about-section">
                     Belief
                 </a>
-                <a class="rows-text medium menu-button" href="#wwd">
+                <a class="rows-text medium menu-button" href="#wwd-section">
                     What we do
                 </a>
-                <a class="rows-text medium menu-button" href="#blog">
+                <a class="rows-text medium menu-button" href="#blog-section">
                     Blog
                 </a>
-                <a class="rows-text medium menu-button" href="#talk">
+                <a class="rows-text medium menu-button" href="#talk-section">
                     Talks
                 </a>
-                <a class="rows-text medium menu-button" href="#dictionary">
+                <a class="rows-text medium menu-button" href="#dic-section">
                     Dictionary
                 </a>
             </div>
@@ -108,30 +107,33 @@
     </intro>
     <div id="main">
         <div id="header">
-            <div class="logo-header" href="#home">
-                <a href="#home">
+            <div class="logo-header" href="#about-section">
+                <a href="#about-section">
                 <img src="img/snkrgks-logo-w.png" >
                     </a>
+
             </div>
             <div class="menu-container horizontal">
-                <a class="rows-text medium menue-button" href="#dictionary">
+                <a class="rows-text medium menue-button" href="#talk-section">
+                    Talks
+
+                </a>
+                <a class="rows-text medium menue-button" href="#dic-section">
                     Dictionary
                 </a>
-                <a class="rows-text medium menue-button" href="#talk">
-                    Talks
-                </a>
-                <a class="rows-text medium menue-button" href="#blog">
-                    Blog
-                </a>
-                <a class="rows-text medium menue-button" href="#wwd">
+
+                <a class="rows-text medium menue-button" href="#wwd-section">
                     What we do
                 </a>
-                <a class="rows-text medium menue-button" href="#home">
+                <a class="rows-text medium menue-button" href="#blog-section">
+                    Blog
+                </a>
+                <a class="rows-text medium menue-button" href="#about-section">
                     Belief
                 </a>
             </div>
         </div>
-        <div id="blog-section" class="main-section texture" name="blog">
+        <div id="blog-section" class="main-section texture">
             <!--<div class="slogan-container">-->
                 <!--<div class="rows-grid large-1">
                     <h2 class="rows-text slogan-text large-1">The most important things are:</h2>
@@ -187,7 +189,7 @@
                 </ul>
             </div>
         </div>
-        <div id="wwd-section" class="main-section" name="wwd">
+        <div id="wwd-section" class="main-section">
             <div id="kreis-container">
             <img id="kreis" src="img/kreis4.svg" />
                 <div id="container-speach"> <p id="saying">Wenn sich ein Sneakerhead erstmal in seinem Element befindet und mit Fachwörtern um sich wirft</p>
@@ -228,7 +230,6 @@
             </div>
         </div>
          <div id="dic-section" class="main-section texture">
-            <a name="dictionary"></a>
              <div class="description-container">
                 <div class="rows-grid small">
                     <h2 class="titel">WE MAKE SNKR DIC</h2>
@@ -240,7 +241,7 @@
             </div>
 
         </div>
-        <div id="talk-section" class="main-section" name="talk">
+        <div id="talk-section" class="main-section">
 
             <video id="bgvid" playsinline autoplay muted loop>
                 <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
@@ -295,6 +296,9 @@
                 </div>
 
         </div>
+
+        </div> <!--main-->
+
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script src="https://cdn.rawgit.com/pixelass/onwheel-fix/v0.3.3/dist/onwheel-fix.min.js"/>
         <script>

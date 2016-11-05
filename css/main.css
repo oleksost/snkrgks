@@ -313,6 +313,7 @@ body {
     font-weight: 400;
     letter-spacing: 0.05em;
     overflow-y: scroll;
+    overflow-x: hidden;
     color: #adb3b7;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     -ms-overflow-style: none;
@@ -378,6 +379,11 @@ footer {
     color: #FFFFFF;
     cursor: default;
 }
+
+.nav-active{
+    color: #FFFFFF !important;
+}
+
 /*=====================================*/
 
 
@@ -909,28 +915,24 @@ footer.min-width {
 
 .footer {
     position: relative;
-    height: 50vh;
     background-color: #000000;
 }
 .footer .logo-footer{
     display: inline;
 }
 .footer .legal{
+    margin-left: 2rem;
     display: inline-block;
     position: relative;
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
 }
 .footer .legal a{
-    line-height: 24px;
-    font-size: 16px;
+    line-height: 1.5rem;
+    font-size: 1rem;
 }
 
 .footer .logo-footer img{
-    height: 100%;
+    height: 50vh;
+    position: relative;
 }
 
 #container-footer{
@@ -947,8 +949,11 @@ footer.min-width {
 
 }
 .container-img-legal{
-    height: 80%;
+    position: relative;
+    display: inline-flex;
+    height: 100%;
     margin-left: 5vw;
+    padding-top: 1rem;
 }
 
 #footer-footer #container-rights {
