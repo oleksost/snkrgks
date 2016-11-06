@@ -4,7 +4,8 @@ var aChildren = $("#header .menu-container").children();
 var aArray = [];
 for (var i=0; i < aChildren.length; i++) {
         var aChild = aChildren[i];
-        var ahref = $(aChild).attr('href');
+        var ahref = $(".container-link a", aChild).attr('href');
+        console.log(ahref);
         aArray.push(ahref);
     }
 
@@ -107,23 +108,23 @@ addWheelListener( window, function( e ) {
 
 $(window).scroll(function() {
     if (riched_end_intro) {
-         if ($(window).scrollTop() >= $('#main').offset().top - 100) {
+
+        var windowPos = $(window).scrollTop() + 1; // get the offset of the window from the top of page
+        var main_offset =$('#main').offset().top - 100;
+        if (windowPos >= main_offset) {
         header_show();
-        } else if ($(window).scrollTop() < $('#main').offset().top - 100) {
+        } else if (windowPos < main_offset) {
         header_hide();
         }
-        var windowPos = $(window).scrollTop() + 1; // get the offset of the window from the top of page
-        var windowHeight = $(window).height(); // get the height of the window
-        var docHeight = $(document).height();
 
         for (var i = aArray.length - 1; i >= 0; i--) {
             var theID = aArray[i];
             var divPos = Math.round($(theID).offset().top); // get the offset of the div from the top of page
             var divHeight = Math.round($(theID).height()); // get the height of the div in question
             if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
-                $("a[href='" + theID + "']").addClass("nav-active");
+                $(".menu-element:has( a[href='" + theID + "'])").addClass("nav-active");
             } else {
-                $("a[href='" + theID + "']").removeClass("nav-active");
+                $(".menu-element:has( a[href='" + theID + "'])").removeClass("nav-active");
             }
         }
     }
@@ -237,9 +238,9 @@ function hide_wwd(){
 }
 
 
-var counter =0;
+var counter = 0;
 
-(function(){
+(function(){ 
     if (counter==phraseList.length){counter=0;}
     text=phraseList[counter].saying;
     author=phraseList[counter].author;

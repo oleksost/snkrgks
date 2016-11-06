@@ -380,8 +380,11 @@ footer {
     cursor: default;
 }
 
-.nav-active{
+.menu-container .nav-active a{
     color: #FFFFFF !important;
+}
+.menu-container .nav-active .balc{
+    background-color: #FFFFFF !important;
 }
 
 /*=====================================*/
@@ -550,13 +553,12 @@ footer {
 
 #header {
     position: fixed;
-    height: 50px;
+    height: 15%;
     width: 100%;
     top: -100px;
     background:  #000000;
     z-index: 10000;
     margin: 0px auto;
-    padding-top: 25px;
      -webkit-transition: top 0.3s;
     -moz-transition: top 0.3s;
     -o-transition: top 0.3s;
@@ -571,18 +573,37 @@ footer {
     display: inline;
     position: absolute;
     right: 0;
+    height: 100%;
     margin-right: 5vw;
 }
 
-#header .menu-container a{
+#header .container-link{
+    position: relative;
+    top: 30%;
+}
+
+
+#header .balc{
+    width:100%;
+    height:0.4rem;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+#header .menu-container .menu-element{
     position: relative;
     float: right;
-    margin-left: 25px;
-    margin-right: 25px;
-    text-align: right;
+    height:100%;
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+    text-align: center;
     display: inline;
     color: #adb3b7;
+
+
 }
+
 
 #header a:hover {
     color: #FFFFFF;
