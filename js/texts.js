@@ -1,10 +1,10 @@
 var phraseList=[
   {
-  "saying": "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.",
-  "author": "Budha"
+  "saying": "That´s the passion that drives you forward.",
+  "author": "J.P. Hudson"
 },
   {
-  "saying": "Life is really simple, but we insist on making it complicated.",
+  "saying": "",
   "author": "Confusius"
 },
   {
