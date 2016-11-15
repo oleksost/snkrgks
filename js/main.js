@@ -79,11 +79,21 @@ function header_hide(){
 addWheelListener( window, function( e ) {
     if (!riched_end_intro) {
 
-    var position = $('intro').position();
-    var new_position = position.left;
+        set_intro_position(e.deltaY);
 
-        if (!($(window).scrollTop() > 0)) {
-            var new_position = position.left - e.deltaY;
+        if ((!riched_end_intro) && !($(window).scrollTop() > 0) && (e.deltaY >= 1|e.deltaX != 0)) {
+            e.preventDefault();
+        }
+    }
+}
+    //,{passive: true}
+);
+
+function set_intro_position(delta) {
+        var position = $('intro').position();
+        var new_position = position.left;
+            if (!($(window).scrollTop() > 0)) {
+            var new_position = position.left - delta;
         }
 
         if (new_position > 0) {
@@ -98,20 +108,24 @@ addWheelListener( window, function( e ) {
         if (!riched_end_intro) {
             $('intro').css({left: new_position});
         }
-        if ((!riched_end_intro) && !($(window).scrollTop() > 0) && (e.deltaY >= 1||e.deltaX != 0)) {
-            e.preventDefault();
-        }
-    }
 }
-    //,{passive: true}
-);
+
 
 window.addEventListener("keydown", function(e) {
     // space and arrow keys
     if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
         if (!riched_end_intro) {
-
+            if([32, 39, 40].indexOf(e.keyCode) > -1) {
+                set_intro_position(40);
+            }else{
+                set_intro_position(-40);
+            }
             e.preventDefault();
+        }else{
+            if([39].indexOf(e.keyCode) > -1) {
+                 e.preventDefault();
+            }
+
         }
     }
 }, false);

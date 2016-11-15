@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c901236-e141-4285-b97e-9eee11e10594" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/scroll-converter.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
     </list>
     <ignored path="snkrgks1 1.iws" />
@@ -67,13 +63,13 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+            <state relative-caret-position="-464">
+              <caret line="79" column="28" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
               <folding>
                 <element signature="e#380#2446#0" expanded="false" />
                 <element signature="n#!!block;n#resize#0" expanded="false" />
-                <element signature="e#5314#5329#0" expanded="false" />
-                <element signature="e#5362#6077#0" expanded="false" />
+                <element signature="e#5683#5698#0" expanded="false" />
+                <element signature="e#5731#6446#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -573,8 +569,8 @@
           <folding>
             <element signature="e#380#2446#0" expanded="false" />
             <element signature="n#!!block;n#resize#0" expanded="false" />
-            <element signature="e#5314#5329#0" expanded="false" />
-            <element signature="e#5362#6077#0" expanded="false" />
+            <element signature="e#5683#5698#0" expanded="false" />
+            <element signature="e#5731#6446#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -642,8 +638,8 @@
           <folding>
             <element signature="e#380#2446#0" expanded="false" />
             <element signature="n#!!block;n#resize#0" expanded="false" />
-            <element signature="e#5314#5329#0" expanded="false" />
-            <element signature="e#5362#6077#0" expanded="false" />
+            <element signature="e#5683#5698#0" expanded="false" />
+            <element signature="e#5731#6446#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -695,8 +691,8 @@
           <folding>
             <element signature="e#380#2446#0" expanded="false" />
             <element signature="n#!!block;n#resize#0" expanded="false" />
-            <element signature="e#5314#5329#0" expanded="false" />
-            <element signature="e#5362#6077#0" expanded="false" />
+            <element signature="e#5683#5698#0" expanded="false" />
+            <element signature="e#5731#6446#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -763,8 +759,8 @@
           <folding>
             <element signature="e#380#2446#0" expanded="false" />
             <element signature="n#!!block;n#resize#0" expanded="false" />
-            <element signature="e#5314#5329#0" expanded="false" />
-            <element signature="e#5362#6077#0" expanded="false" />
+            <element signature="e#5683#5698#0" expanded="false" />
+            <element signature="e#5731#6446#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -821,8 +817,8 @@
           <folding>
             <element signature="e#380#2446#0" expanded="false" />
             <element signature="n#!!block;n#resize#0" expanded="false" />
-            <element signature="e#5314#5329#0" expanded="false" />
-            <element signature="e#5362#6077#0" expanded="false" />
+            <element signature="e#5683#5698#0" expanded="false" />
+            <element signature="e#5731#6446#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -879,8 +875,8 @@
           <folding>
             <element signature="e#380#2446#0" expanded="false" />
             <element signature="n#!!block;n#resize#0" expanded="false" />
-            <element signature="e#5314#5329#0" expanded="false" />
-            <element signature="e#5362#6077#0" expanded="false" />
+            <element signature="e#5683#5698#0" expanded="false" />
+            <element signature="e#5731#6446#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -937,8 +933,8 @@
           <folding>
             <element signature="e#380#2446#0" expanded="false" />
             <element signature="n#!!block;n#resize#0" expanded="false" />
-            <element signature="e#5314#5329#0" expanded="false" />
-            <element signature="e#5362#6077#0" expanded="false" />
+            <element signature="e#5683#5698#0" expanded="false" />
+            <element signature="e#5731#6446#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1061,13 +1057,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+        <state relative-caret-position="-464">
+          <caret line="79" column="28" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
           <folding>
             <element signature="e#380#2446#0" expanded="false" />
             <element signature="n#!!block;n#resize#0" expanded="false" />
-            <element signature="e#5314#5329#0" expanded="false" />
-            <element signature="e#5362#6077#0" expanded="false" />
+            <element signature="e#5683#5698#0" expanded="false" />
+            <element signature="e#5731#6446#0" expanded="false" />
           </folding>
         </state>
       </provider>
