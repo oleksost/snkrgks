@@ -75,6 +75,7 @@ function header_hide(){
 
 }
 
+
 addWheelListener( window, function( e ) {
     if (!riched_end_intro) {
 
@@ -97,14 +98,23 @@ addWheelListener( window, function( e ) {
         if (!riched_end_intro) {
             $('intro').css({left: new_position});
         }
-        if ((!riched_end_intro) && !($(window).scrollTop() > 0) && !(e.deltaY < 1)) {
+        if ((!riched_end_intro) && !($(window).scrollTop() > 0) && (e.deltaY >= 1||e.deltaX != 0)) {
             e.preventDefault();
         }
-
     }
 }
     //,{passive: true}
 );
+
+window.addEventListener("keydown", function(e) {
+    // space and arrow keys
+    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        if (!riched_end_intro) {
+
+            e.preventDefault();
+        }
+    }
+}, false);
 
 $(window).scroll(function() {
     if (riched_end_intro) {
@@ -240,7 +250,7 @@ function hide_wwd(){
 
 var counter = 0;
 
-(function(){ 
+(function(){
     if (counter==phraseList.length){counter=0;}
     text=phraseList[counter].saying;
     author=phraseList[counter].author;

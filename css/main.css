@@ -312,8 +312,8 @@ body {
     font-size: 1em;
     font-weight: 400;
     letter-spacing: 0.05em;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    /*overflow-y: scroll;
+    overflow-x: hidden;*/
     color: #adb3b7;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     -ms-overflow-style: none;
@@ -532,7 +532,7 @@ footer.min-width {
 }
 
 #header .menu-container{
-    display: inline;
+    display: flex;
     position: absolute;
     right: 0;
     height: 100%;
@@ -676,6 +676,8 @@ footer.min-width {
 
 #talk-section .description-container{
     float: right;
+    max-width: 60vw;
+    width: auto;
 }
 
 .description-container-talks .rows-grid{
