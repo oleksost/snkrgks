@@ -326,8 +326,8 @@ body.no-scroll {
 }
 
 .horizontal-scroll {
-    overflow-x: scroll !important;
-    overflow-y: hidden !important;
+    overflow-x: scroll ;
+    overflow-y: hidden ;
 }
 intro {
     position: relative;
@@ -446,15 +446,11 @@ footer.min-width {
     height:100%;
     top: 0;
     width: 20vw;
+    padding-top: 30vh;
 }
 
 #menu-intro {
     position: relative;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
     text-align: left;
 }
 
@@ -471,7 +467,7 @@ footer.min-width {
 .slogan-text{
     color: #FFFFFF;
     margin-left: 8vw;
-    margin-top: 8vh;
+    margin-top: 15vh;
     margin-bottom: 0;
     position: relative;
     top: 50%;
@@ -517,7 +513,7 @@ footer.min-width {
     position: fixed;
     height: 15%;
     width: 100%;
-    top: -100px;
+    top: -100%;
     background:  #000000;
     z-index: 10000;
     margin: 0px auto;
@@ -590,9 +586,39 @@ footer.min-width {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
+#dropdown-menue-element{
+    display: none !important;
+}
+
 #header .logo-header img{
     height:100%;
 }
+
+.menu-icon{
+    top: 20%  !important;
+}
+
+#dropdown-menue-element:hover + .dropdown-content{
+        display:block !important;
+
+}
+.menu-icon img{
+    height:60%;
+}
+
+.menu-icon:hover + .dropdown-content{
+    display: block !important;
+}
+
+
+@media only screen and (min-width: 48em) {
+    .dropdown-content:hover {
+        display: block !important;
+    }
+}
+
+
 
 
 /*====================================*/
@@ -742,6 +768,7 @@ footer.min-width {
     position: absolute;
     opacity: 1;
     z-index: 1000;
+    max-width: 50%;
     top: 50%;
     left:50%;
 
@@ -997,13 +1024,13 @@ footer.min-width {
     width: 100%;
     height: 20%;
     background: inherit;
-    color: #FFFFF;
+    color: #ffffff;
 
 }
 .container-img-legal{
     position: relative;
     display: inline-flex;
-    width: 100%;
+    /*width: 100%;*/
     margin-left: 5vw;
     padding-top: 2rem;
 }
@@ -1071,37 +1098,7 @@ footer.min-width {
 
  /*===================================*/
 
-/*MOBILE AND SMALL SCREEN*/
-@media only screen and (max-width: 48em) {
-     {
-        overflow: auto;
-        overflow-y: auto;
-        overflow-x: hidden;
-        min-width: 18.75em;
-    }
 
-    section,
-    footer {
-        display: block;
-        height: auto;
-        min-height: 30vh;
-        width: 100%;
-        overflow: hidden;
-        margin-right: 0;
-        padding: 3em 0 4em;
-    }
-
-    .logo-flexible {
-        display: none;
-    }
-
-    .logo-flexible-mobile {
-        display: block;
-        width: 100%;
-        height: auto;
-        margin: 0;
-    }
-}
 
 
 
@@ -1122,6 +1119,7 @@ footer.min-width {
 }
 .vertical-scroll{
     overflow-y: scroll !important;
+    overflow-x: hidden !important;
 }
 
 .altitude_expand .description-container{
@@ -1131,4 +1129,168 @@ footer.min-width {
 
 .hidden_altitude{
     display: none;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none !important;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    width: 20rem;
+    right: 2vw;
+    top:12vh;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #adb3b7;
+    margin: 40px 16px;
+    text-decoration: none;
+    display: block !important;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    color: #ffffff;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block !important;}
+
+
+
+/*================MENU ICON================*/
+
+
+
+
+
+@media only screen and (max-width: 1200px) {
+
+    .horizontal .menu-element {
+        display: none !important;
+    }
+
+    #dropdown-menue-element{
+        display: inline !important;
+      }
+
+
+
+}
+
+
+/*MOBILE AND SMALL SCREEN*/
+@media only screen and (max-width: 48em) {
+    html{
+        width: 90%;
+    }
+    body{
+        overflow-x: hidden !important;
+        overflow-y: scroll !important;
+    }
+
+    #introduction{
+        display: none;
+    }
+
+     {
+        overflow: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
+        min-width: 18.75em;
+    }
+
+    section,
+    footer {
+        display: block;
+        height: auto;
+        min-height: 30vh;
+        width: 100%;
+        overflow: hidden;
+        margin-right: 0;
+        padding: 3em 0 4em;
+    }
+    #main{
+        width: 100vw;
+    }
+    #header{
+        width: 100vw;
+    }
+
+    .logo-flexible {
+        display: none;
+    }
+
+    .logo-flexible-mobile {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    #menu-container-intro{display: none;}
+
+    #about-section .container-about{
+        width: 100%;
+    }
+
+    #talk-section video{
+        display: none;
+    }
+    .description-container{
+        width: initial;
+        max-width: initial !important;
+    }
+    #talk-section .description-container{
+
+    }
+
+    #header{top:0;}
+
+    #kreis-container{
+        display: none !important;
+    }
+    .description-container{
+    }
+
+    .shoes-container{
+        width: 100vw;
+    }
+
+    #blog-section{
+        display: block !important;
+    }
+    intro{
+        display: block !important;
+        width: 100vw;
+    }
+
+    /*#dropdown{
+        width: 100vw;
+        height: 85vh;
+    }*/
+
 }
