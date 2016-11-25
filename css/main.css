@@ -1074,6 +1074,18 @@ footer.min-width {
     width: 100%;
 }
 
+#dic-pic-container{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#dic-pic-container svg{
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
 
  button {
   display: block;
