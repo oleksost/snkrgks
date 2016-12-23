@@ -1,11 +1,10 @@
 var riched_end_intro=false;
-var backgrounds=["img/2.png","img/1.png" ];
+var backgrounds=["img/snkrgks-header-1.jpg","img/snkrgks-header-1.jpg","img/snkrgks-header-2.jpg","img/snkrgks-header-3.jpg","img/snkrgks-header-4.jpg","img/snkrgks-header-5.jpg"];
 var aChildren = $("#header .menu-container").children();
 var aArray = [];
-for (var i=0; i < aChildren.length-1; i++) {
+for (var i=0; i < aChildren.length-3; i++) {
         var aChild = aChildren[i];
         var ahref = $(".container-link a", aChild).attr('href');
-        console.log(ahref);
         aArray.push(ahref);
     }
 
@@ -76,6 +75,7 @@ function header_hide(){
 }
 
 
+
 if($(window).width() >= 500) {
 
 
@@ -102,7 +102,7 @@ if($(window).width() >= 500) {
         if (new_position > 0) {
             new_position = 0;
         } else if ((-new_position >= $('intro').innerWidth() - $(window).width()) && !riched_end_intro) {
-            $("body").removeClass("horizontal-scroll");
+            $(".body").addClass("vertical-scroll");
             $("body").addClass("vertical-scroll");
             //calculate new position
             new_position = -$('intro').innerWidth() + $(window).width();
@@ -135,8 +135,7 @@ if($(window).width() >= 500) {
 
     $(window).scroll(function () {
         if (riched_end_intro) {
-
-            var windowPos = $(window).scrollTop() + 1; // get the offset of the window from the top of page
+            var windowPos = $(window).scrollTop() + 1;
             var main_offset = $('#main').offset().top - 100;
             if (windowPos >= main_offset) {
                 header_show();
@@ -163,6 +162,7 @@ if($(window).width() >= 500) {
     });
 
     $(document).ready(function () {
+
         for (i in backgrounds) {
             pfad = 'url(' + backgrounds[i] + ') no-repeat';
             $('<div />').attr('id', i).css({"background": pfad}).appendTo('#background');
@@ -195,42 +195,30 @@ if($(window).width() >= 500) {
         });
 
     });
-
     function preventDefault(e) {
         e = e || window.event;
         if (e.preventDefault)
             e.preventDefault();
         e.returnValue = false;
     }
-
 }
 
 
-
-
-
-
-
-
 $("#more_altitude").click(function(){
-
     $('html, body').animate({
         scrollTop: $("#wwd-section").offset().top - $("#header").outerHeight()-20
     }, 1000);
+    $(".body").addClass("deactivate");
     $("body").addClass("deactivate");
     $("#kreis-container").addClass("remove");
     max_height=$("#wwd-section").height();
     $("#wwd-section").css("max-height", max_height);
     $("#wwd-section").css("min-height", max_height);
-
     $("#wwd-section").addClass("altitude_expand");
     $("#description-wwd").addClass("vertical-scroll");
     $(".hidden_altitude").show();
     $("#container-close").show();
     $("#more_altitude").hide();
-
-
-    //$("body").toggleClass("noScroll")
 
 })
 
@@ -241,20 +229,19 @@ $(".menue-button").click(function(){
      resize();
      //$("#main").show();
      hide_wwd();
-     if ($(".dropdown-content").hasClass("show")) {
-         $(".dropdown-content").removeClass("show");
+     if ($(this).parent().hasClass("show")) {
+         $(this).parent().removeClass("show");
      }
 });
 
 $("#close").click(function () {
      hide_wwd();
-
-
 })
 
 //======================================//
 
 function hide_wwd(){
+    $(".body").removeClass("deactivate");
     $("body").removeClass("deactivate");
      $(".hidden_altitude").hide();
      $("#container-close").hide();
@@ -265,12 +252,8 @@ function hide_wwd(){
 }
 
 
-
-
 if($(window).width() >= 500) {
-
     var counter = 0;
-
     (function () {
         if (counter == phraseList.length) {
             counter = 0;
@@ -283,43 +266,46 @@ if($(window).width() >= 500) {
             $("#container-speach").animate({opacity: 1}, 400, function () {
             })
             counter = counter + 1;
-
         });
-
         setTimeout(arguments.callee, 5000);
-
-
     })();
 }
 
-$(window).on('beforeunload', function() {
-    $("body").addClass("horizontal-scroll");
-    $(window).scrollTop(0);
+$(document).on('ready', function() {
+    //$(window).scrollTop(0);
+    if($(window).scrollTop()>0){
+        $(".body").addClass("vertical-scroll");
+        $("body").addClass("vertical-scroll");
+        riched_end_intro=true;
+        var position = $('intro').position();
+        var new_position = position.left + ($(window).width() - (position.left + $('intro').width()));
+        $('intro').css({left: new_position});
+
+    }
+
 });
 
+$(window).on('beforeunload', function() {
+    //$(window).scrollTop(0);
+});
 
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 
-/*
-$(".menu-icon").click(function () {
+$(window).click(function() {
+       //Hide the menus if visible
+          $(".dropdown-content").removeClass("show");
+});
+$(".menu-icon").click(function (e) {
+        e.stopPropagation();
+        var id=$(this).attr('id');
+        $(".dropdown-content:not(."+ id+")").removeClass("show");
+        $("."+ id).toggleClass("show");
 
-    $(".dropdown-content").toggleClass("show");
+});
 
 
-});*/
-
-
-/*
-// Close the dropdown menu if the user clicks outside of it
- $(document).click(function(){
-      console.log("Bam");
-     if ($(".dropdown-content").hasClass("show")) {
-         $(".dropdown-content").removeClass("show");
-     }
-
-});*/
 
  function resize() {
         if (riched_end_intro) {

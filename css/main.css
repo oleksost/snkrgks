@@ -305,6 +305,7 @@ summary {
 }
 
 body {
+    position:relative;
     margin: 0;
     width: 100%;
     height: 100%;
@@ -326,9 +327,16 @@ body.no-scroll {
 }
 
 .horizontal-scroll {
+    position:relative;
     overflow-x: scroll ;
     overflow-y: hidden ;
 }
+
+.initial-scroll{
+    overflow-x: scroll ;
+    overflow-y: hidden ;
+}
+
 intro {
     position: relative;
     white-space: nowrap;
@@ -365,7 +373,7 @@ footer {
     text-decoration: none;
 }
 
-.vertical a, h4{
+.vertical a, .vertical h4{
     display: block;
     margin-top: 20px;
     -webkit-margin-before: 1em;
@@ -380,7 +388,7 @@ footer {
 
 .menu-container a:hover, li:hover{
     color: #8d1d2c;
-    cursor: default;
+    cursor: pointer;
 }
 
 .menu-container .nav-active a{
@@ -511,7 +519,8 @@ footer.min-width {
 /*=================HEADER===================*/
 #header {
     position: fixed;
-    height: 15%;
+    height: 161px;
+    min-height: 50px;
     width: 100%;
     top: -100%;
     background:  #000000;
@@ -532,33 +541,32 @@ footer.min-width {
     position: absolute;
     right: 0;
     height: 100%;
-    margin-right: 5vw;
+    margin-right: 8vw;
 
 }
 
 #header .container-link{
     position: relative;
-    top: 30%;
+    top: 40%;
 }
 #header .container-link a{
-    font-size: 1.5rem;
+    font-size: 1.06rem;
 }
 
 
 #header .balc{
     width:100%;
-    height:0.4rem;
+    height: 4px;
     position: absolute;
     top:0;
     left: 0;
 }
-
 #header .menu-container .menu-element{
     position: relative;
     float: right;
     height:100%;
-    padding-left: 1.7rem;
-    padding-right: 1.7rem;
+    padding-left: 12.5px;
+    padding-right: 12.5px;
     text-align: center;
     display: inline;
     color: #adb3b7;
@@ -567,7 +575,7 @@ footer.min-width {
 
 #header a:hover {
     color: #FFFFFF;
-    cursor: default;
+    cursor: pointer;
 }
 
 #header .logo-header {
@@ -595,28 +603,21 @@ footer.min-width {
     height:100%;
 }
 
-.menu-icon{
-    top: 20%  !important;
-}
 
-#dropdown-menue-element:hover + .dropdown-content{
-        display:block !important;
 
-}
+
+
 .menu-icon img{
-    height:60%;
+    height: 50px;
 }
 
-.menu-icon:hover + .dropdown-content{
-    display: block !important;
+#language-select .menu-icon img{
+    height: 8%;
 }
 
 
-@media only screen and (min-width: 48em) {
-    .dropdown-content:hover {
-        display: block !important;
-    }
-}
+
+
 
 
 
@@ -689,6 +690,7 @@ footer.min-width {
     position: relative;
     width: 100%;
     height: 100vh;
+
 }
 
 #video-cover{
@@ -702,8 +704,6 @@ footer.min-width {
 
 #talk-section .description-container{
     float: right;
-    max-width: 60vw;
-    width: auto;
 }
 
 .description-container-talks .rows-grid{
@@ -713,11 +713,13 @@ footer.min-width {
 
 
 #talk-section video {
+    background-color: #000000;
     position: absolute;
     z-index: -100;
-    min-width: 100%;
+    min-width: 100vw;
     min-height: 100vh;
-    height: 150vh;
+    max-height: 160vh;
+    width: 130%;
    /*background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;*/
   background-size: cover;
   transition: 1s opacity;
@@ -836,10 +838,9 @@ footer.min-width {
     display: inline-block;
 }
 .description-container{
-    width: 48vw;
+    width: 44vw;
     display: inline-block;
-    margin: 5vw;
-    margin-top: 70px;
+    padding: 166px 5vw 5vw 5vw;
     color: #FFFFFF;
 
 
@@ -993,15 +994,19 @@ footer.min-width {
     background-color: #000000;
     height: 60vh;
 }
-.footer .logo-footer{
-    display: inline;
-    width: 25%;
-}
 .footer .legal{
-    margin-left: 2rem;
     display: inline-block;
     position: relative;
-    width: 25%;
+    float: right;
+    /*width: 25%;*/
+}
+.footer-content iframe{
+    width: 100%;
+}
+
+.footer .legal *{
+    padding: 0;
+    font-size: 1rem;
 }
 .footer .legal a{
     line-height: 1.5rem;
@@ -1011,13 +1016,15 @@ footer.min-width {
 .footer .logo-footer img{
     width: 100%;
     position: relative;
+    padding-top: 20px;
 }
 
 #container-footer{
     display: inline-block;
     position: relative;
     width: 100%;
-    height: 80%;
+    min-height: 80%;
+    background-color: inherit;
 }
 #footer-footer{
     position: relative;
@@ -1029,9 +1036,10 @@ footer.min-width {
 }
 .container-img-legal{
     position: relative;
-    display: inline-flex;
+    display: inline-block;
     /*width: 100%;*/
     margin-left: 5vw;
+    margin-right: 10vw;
     padding-top: 2rem;
 }
 
@@ -1053,18 +1061,38 @@ footer.min-width {
     color: inherit !important;
 }
 .footer ul{
-     list-style:none
+     list-style:none;
 }
 .footer ul li {
 
 	     }
-.footer ul li:before {
+.footer ul li a:before {
 		 content: "\003e \00a0";
 	     }
 .footer .legal h4 {
     margin-bottom: 2rem;
     color: #FFFFFF;
 }
+
+
+.footer-content img{
+    position: relative;
+    width:100%;
+}
+
+.footer-content {
+    vertical-align: top;
+    position: relative;
+    display: inline-block;
+    width: 15%;
+    margin-left: 2rem;
+    /*width: 180px;*/
+}
+.footer-content h4{
+    text-transform: uppercase;
+    color:#ffffff;
+}
+
 /*=====================================*/
 
 /*================DIC==============*/
@@ -1075,21 +1103,21 @@ footer.min-width {
 }
 
 #dic-pic-container{
-    width: 100%;
-    margin-top: 50px;
+    width: 50vw;
+    margin-top: 166px;
     margin-bottom: 50px;
+    padding-right: 3rem;
 }
 #dic-pic-container svg{
     position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+
 }
 
- button {
+ .button {
+     text-decoration: none;
+  text-align: center;
   display: block;
-  width: 50%;
+  width: 70%;
   padding: .4rem;
   border: none;
   margin: 1rem auto;
@@ -1100,7 +1128,7 @@ footer.min-width {
   cursor: pointer;
   transition: .3s background;
 }
- button:hover {
+ .button:hover {
    background: rgba(0,0,0,0.5);
 }
 
@@ -1130,8 +1158,8 @@ footer.min-width {
  padding-right: 5rem;
 }
 .vertical-scroll{
-    overflow-y: scroll !important;
-    overflow-x: hidden !important;
+    overflow-y: scroll ;
+    overflow-x: hidden ;
 }
 
 .altitude_expand .description-container{
@@ -1166,20 +1194,22 @@ footer.min-width {
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
+    padding-bottom: 5vh;
+    width: 50%;
+    text-align: center;
     display: none !important;
     position: absolute;
     background-color: #000000;
     min-width: 160px;
-    width: 20rem;
-    right: 2vw;
-    top:12vh;
+    top:161px;
+    right: 0;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
     color: #adb3b7;
-    margin: 40px 16px;
+    margin-top: 5vh;
     text-decoration: none;
     display: block !important;
 }
@@ -1205,7 +1235,7 @@ footer.min-width {
         display: none !important;
     }
 
-    #dropdown-menue-element{
+    #dropdown-menue-element, #language-select{
         display: inline !important;
       }
 
@@ -1217,7 +1247,7 @@ footer.min-width {
 /*MOBILE AND SMALL SCREEN*/
 @media only screen and (max-width: 48em) {
     html{
-        width: 90%;
+        width: 100%;
     }
     body{
         overflow-x: hidden !important;
@@ -1233,6 +1263,11 @@ footer.min-width {
         overflow-y: auto;
         overflow-x: hidden;
         min-width: 18.75em;
+    }
+
+    .initial-scroll{
+    overflow-x: hidden ;
+    overflow-y: scroll;
     }
 
     section,
@@ -1276,16 +1311,18 @@ footer.min-width {
         width: initial;
         max-width: initial !important;
     }
-    #talk-section .description-container{
 
+    #header{
+        top:0;
+        min-height: 15vh;
+        height: 100px;
     }
-
-    #header{top:0;}
 
     #kreis-container{
         display: none !important;
     }
     .description-container{
+        padding: 15vh 5vw 5vw 5vw;
     }
 
     .shoes-container{
@@ -1300,9 +1337,71 @@ footer.min-width {
         width: 100vw;
     }
 
-    /*#dropdown{
-        width: 100vw;
-        height: 85vh;
-    }*/
+    .footer-content {
+        vertical-align: top;
+        position: relative;
+        display: block;
+        width: 80%;
+        margin-top: 20px;
+        /*width: 180px;*/
+    }
+    .footer .legal{
+        position: relative;
+    }
+    #dic-section{
+        display: block;
+    }
+    .container-img-legal{
+        pedding-left: 0;
+    }
+    #dic-pic-container{
+        margin-bottom: initial;
+    }
+    #dic-pic-container{
+        margin-top: initial;
+    }
+    #social-media div{
+        width: 100% !important;
+    }
+    #social-media .uiScaledImageContainer{
+        width: 100% !important;
+    }
+    #header .logo-header img{
+        position: relative;
+        height:50%;
+        top:25%;
+    }
+    #dic-pic-container{
+    width: 100%;
+    }
+    #header .menu-container{
+        width: 50%;
+    }
+    .dropdown-content{
+        width: 100%;
+        top: 15vh;
+        height:100vh;
+    }
+    #header .container-link{
+        top:25%;
+    }
+    #header .menu-container{
+        margin-right: 0;
+    }
+    .footer .legal{
+        float: initial;
+    }
 
 }
+
+/*======BIG SCREEN=======*/
+@media only screen and (min-width: 1600px) {
+
+#container-speach{
+    max-width: 25%;
+}
+
+
+}
+
+

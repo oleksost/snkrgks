@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="">
+<html lang="de">
 
 <head>
     <link rel="shortcut icon" href="favicon.ico">
@@ -10,44 +10,31 @@
     <link rel="apple-touch-icon" sizes="72x72" href="snkrgks-72-72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="snkrgks-114-114.png" />
     <link rel="apple-touch-icon" sizes="144x144" href="snkrgks-144-144.png">
-
-
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="snkrgks-144-144.png">
-
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>SNKRGKS Sneakerblog</title>
     <meta name="SNKRGKS | Sneakergeeks | explore the attitude" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/animation.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 </head>
 
-<body class="horizontal-scroll">
+<body class="initial-scroll">
+<div class="body initial-scroll">
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <!-- Add your site or application content here -->
-    <!-- HELLO SECTION -->
+
     <intro>
         <!-- LOGO SECTION -->
         <section id="introduction">
             <div id="background"></div>
-            <!-- HELLO SECTION -->
-            <!--<section id="hello-section">
-                <span class="rows-text large color">
-                    Hello!
-                </span>
-                <br>
-                <span class="rows-text large">
-                    This <span class="nowrap"> is</span>
-                </span>
-            </section>-->
             <section id='section-logo'>
                 <svg class="logo-flexible color" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5556.54 1657.98">
                     <defs>
@@ -68,23 +55,6 @@
                     <path class="a" d="M5511.54,2537.39q-22.06-49.63-62.5-81.8t-96.5-46.87q-56.09-14.7-124.07-14.71-99.26,0-156.24,26.66t-84.56,60.66q-27.57,34-34.92,67.09t-7.35,46q0,69.88,28.49,107.53t76.28,57.9a816,816,0,0,0,107.53,34.92q57.91,14.73,135.1,34.92,55.15,14.73,109.37,30.33t97.42,43.2a223.91,223.91,0,0,1,69.85,69.85q26.63,42.31,26.66,110.29,0,71.69-30.33,121.32a249.37,249.37,0,0,1-79,80.88q-48.73,31.27-110.29,45a558.21,558.21,0,0,1-122.24,13.79q-189.34,0-285.83-82.72t-96.5-261h36.77q0,159.91,89.15,234.36t256.42,74.45a489.88,489.88,0,0,0,105.69-11.95q54.19-11.93,98.34-38.6a229.41,229.41,0,0,0,72.61-68.93q28.47-42.26,28.49-102.93,0-62.47-28.49-101.1t-73.53-63.42q-45.06-24.81-103.85-39.52T5234,2853.55q-68-16.54-119.48-31.25t-91.91-33.09q-58.84-25.72-86.39-71.69t-27.57-123.15q0-38.6,16.54-80.88t55.14-77.2q38.6-34.89,99.26-57t148.89-22.06q158.07,0,250,71.69t91.91,229.76h-36.77Q5533.59,2587,5511.54,2537.39Z" transform="translate(-39.55 -2011.69)" />
                     <text x="-39.55" y="-2011.69" />
                 </svg>
-                <!--<svg class="logo-flexible-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101.92 592.56">
-                    <defs>
-                        <style>
-                        .a {
-                            fill: #FFFFFF;
-                        }
-                        </style>
-                    </defs>
-                    <title>snkrgks-logo-full-vertical-black</title>
-                    <path class="a" d="M305.81,56.46a13,13,0,0,0,3.36,7.15,20.43,20.43,0,0,0,7,4.78,40.16,40.16,0,0,0,9.93,2.67,82.29,82.29,0,0,0,12,.83,69.75,69.75,0,0,0,13-1.05A32.88,32.88,0,0,0,360.1,68a13.79,13.79,0,0,0,5.08-4.17,8.63,8.63,0,0,0,1.64-5,7.17,7.17,0,0,0-3-6,24.22,24.22,0,0,0-7.74-3.73,73.75,73.75,0,0,0-11-2.32q-6.18-.88-12.67-1.71t-12.67-2a56.57,56.57,0,0,1-11-3.07,22.46,22.46,0,0,1-7.74-5,10.49,10.49,0,0,1-3-7.67,10.09,10.09,0,0,1,2.42-6.31,20.7,20.7,0,0,1,7.2-5.44,47.65,47.65,0,0,1,12-3.77,87.45,87.45,0,0,1,16.58-1.4A82.12,82.12,0,0,1,353,12a42.76,42.76,0,0,1,11.81,4.08,20,20,0,0,1,7,6,12.64,12.64,0,0,1,2.35,7.28H364a9.23,9.23,0,0,0-2.27-6.23,16.57,16.57,0,0,0-6.18-4.3,37.81,37.81,0,0,0-8.92-2.46,66.28,66.28,0,0,0-10.33-.79,62.54,62.54,0,0,0-13.69,1.27,29.78,29.78,0,0,0-8.84,3.29,11.79,11.79,0,0,0-4.54,4.47,6.25,6.25,0,0,0-.47,4.91,8.37,8.37,0,0,0,4.38,4.91,35,35,0,0,0,8.45,3,102.88,102.88,0,0,0,11,1.93q6,0.75,12.28,1.58T357,43A52,52,0,0,1,367.45,46a20.4,20.4,0,0,1,7.27,5,10.89,10.89,0,0,1,2.74,7.58q0,8.77-10.79,13.59T336.32,77a97.68,97.68,0,0,1-16.27-1.27,49.87,49.87,0,0,1-13-3.86,23.52,23.52,0,0,1-8.53-6.4,14,14,0,0,1-3.05-9h10.33Z" transform="translate(-283.99 -10.52)" />
-                    <path class="a" d="M303.39,107.93h-0.31V163H292.44V99.87h12L369.57,155h0.31V99.87h10.64V163H368.16Z" transform="translate(-283.99 -10.52)" />
-                    <path class="a" d="M297.68,250.68V187.55h10.64v32.71L366,187.55h12l-44.43,25.17,52.25,38h-13L326,216.4l-17.68,9.91v24.38H297.68Z" transform="translate(-283.99 -10.52)" />
-                    <path class="a" d="M307.53,309.69v28.67l-10.64-.09v-63H341q18.62,0,28.47,3.9t9.86,12.67a11.58,11.58,0,0,1-4.3,9.47q-4.31,3.51-14,6a22,22,0,0,1,7.82,2.81,13.14,13.14,0,0,1,4.22,4.21,13.63,13.63,0,0,1,1.8,5q0.39,2.63.55,5.09a50.76,50.76,0,0,0,.55,6,21.46,21.46,0,0,0,.94,3.86,6.73,6.73,0,0,0,1.33,2.32,5.14,5.14,0,0,0,1.88,1.27v0.53l-11.73.09A8.6,8.6,0,0,1,366,334a49.78,49.78,0,0,1-1.1-5.87q-0.39-3.07-.63-6a20.15,20.15,0,0,0-.86-4.73,8.6,8.6,0,0,0-3.05-4.08,15.22,15.22,0,0,0-5.08-2.32A36.11,36.11,0,0,0,348.6,310q-3.68-.26-7.59-0.26H307.53Zm33.17-5.09a80.74,80.74,0,0,0,11-.7,36.63,36.63,0,0,0,8.84-2.24,16.4,16.4,0,0,0,5.94-3.9,8.1,8.1,0,0,0,2.19-5.7,7.87,7.87,0,0,0-2.27-5.79,15.59,15.59,0,0,0-6.1-3.59,40.2,40.2,0,0,0-8.76-1.84,96.47,96.47,0,0,0-10.25-.53H307.53v24.29H340.7Z" transform="translate(-283.99 -10.52)" />
-                    <path class="a" d="M336.24,398.51v-5.09h48.19V426h-9.07V415.26a40.27,40.27,0,0,1-6.81,5.13,42,42,0,0,1-8.84,3.95,66.18,66.18,0,0,1-11.58,2.5,113.34,113.34,0,0,1-14.86.88,87.14,87.14,0,0,1-19.71-2.1,50.18,50.18,0,0,1-15.64-6.27,30.48,30.48,0,0,1-10.25-10.48A28.74,28.74,0,0,1,284,394.13a27.57,27.57,0,0,1,3.13-12.93,28.84,28.84,0,0,1,9.62-10.43,51.94,51.94,0,0,1,16.27-7,92.46,92.46,0,0,1,23.08-2.54,106.66,106.66,0,0,1,16.66,1.23,63.81,63.81,0,0,1,13.92,3.73,36,36,0,0,1,10.4,6.23,21.6,21.6,0,0,1,6.1,8.81h-11a16,16,0,0,0-4.77-6.31,29.88,29.88,0,0,0-8.06-4.69,52.09,52.09,0,0,0-10.48-2.89,70.15,70.15,0,0,0-12-1,72.73,72.73,0,0,0-19.09,2.19,37.56,37.56,0,0,0-13.14,6.18,24.2,24.2,0,0,0-7.59,9.56,30.28,30.28,0,0,0-2.42,12.23,19.67,19.67,0,0,0,2.74,10,25.87,25.87,0,0,0,8,8.33,42.66,42.66,0,0,0,12.83,5.7,64.77,64.77,0,0,0,17.29,2.1,80.27,80.27,0,0,0,9.39-.57,58,58,0,0,0,9.39-1.89,43.16,43.16,0,0,0,8.45-3.42,25.32,25.32,0,0,0,6.73-5.17,17.07,17.07,0,0,0,3.68-6.23,26.69,26.69,0,0,0,1.17-6.84h-38Z" transform="translate(-283.99 -10.52)" />
-                    <path class="a" d="M297.68,513.73V450.6h10.64V483.3L366,450.6h12l-44.43,25.17,52.25,38h-13L326,479.44l-17.68,9.91v24.38H297.68Z" transform="translate(-283.99 -10.52)" />
-                    <path class="a" d="M305.81,582.56a13,13,0,0,0,3.36,7.15,20.42,20.42,0,0,0,7,4.78,40.14,40.14,0,0,0,9.93,2.67,82.22,82.22,0,0,0,12,.83,69.76,69.76,0,0,0,13-1.05,32.88,32.88,0,0,0,8.92-2.85,13.78,13.78,0,0,0,5.08-4.17,8.62,8.62,0,0,0,1.64-5,7.17,7.17,0,0,0-3-6,24.2,24.2,0,0,0-7.74-3.73,73.69,73.69,0,0,0-11-2.32Q339,572,332.49,571.2t-12.67-2a56.61,56.61,0,0,1-11-3.07,22.46,22.46,0,0,1-7.74-5,10.49,10.49,0,0,1-3-7.67,10.09,10.09,0,0,1,2.42-6.31,20.69,20.69,0,0,1,7.2-5.44,47.65,47.65,0,0,1,12-3.77,87.41,87.41,0,0,1,16.58-1.4A82.15,82.15,0,0,1,353,538.1a42.75,42.75,0,0,1,11.81,4.08,20,20,0,0,1,7,6,12.64,12.64,0,0,1,2.35,7.28H364a9.23,9.23,0,0,0-2.27-6.23,16.57,16.57,0,0,0-6.18-4.3,37.81,37.81,0,0,0-8.92-2.46,66.22,66.22,0,0,0-10.33-.79A62.54,62.54,0,0,0,322.63,543a29.77,29.77,0,0,0-8.84,3.29,11.8,11.8,0,0,0-4.54,4.47,6.25,6.25,0,0,0-.47,4.91,8.37,8.37,0,0,0,4.38,4.91,35,35,0,0,0,8.45,3,102.89,102.89,0,0,0,11,1.93q6,0.75,12.28,1.58t12.12,2a52,52,0,0,1,10.4,3.07,20.41,20.41,0,0,1,7.27,5,10.89,10.89,0,0,1,2.74,7.58q0,8.77-10.79,13.59t-30.35,4.82a97.68,97.68,0,0,1-16.27-1.27,49.83,49.83,0,0,1-13-3.86,23.51,23.51,0,0,1-8.53-6.4,14,14,0,0,1-3.05-9h10.33Z" transform="translate(-283.99 -10.52)" />
-                </svg>-->
             </section>
         </section>
         <!-- WHAT-WE-DO SECTION -->
@@ -93,162 +63,192 @@
             <!-- <div class="header-logo"></div>-->
             <div class="container-about">
                 <div class="rows-grid large-1">
-                    <div class="rows-text slogan-text large-1">It´s the passion that drives you forward.
-            </div>
+                    <div class="rows-text slogan-text large-1">Es ist die Leidenschaft für Sneaker, die dich antreibt.
+                    </div>
                 </div>
             </div>
-        <div id="menu-container-intro">
-            <div id="menu-intro" class="menu-container vertical">
-                <a class="rows-text medium menu-button" href="#about-section">
-                    Belief
+            <div id="menu-container-intro">
+                <div id="menu-intro" class="menu-container vertical">
+                    <a class="rows-text medium menu-button" href="#about-section">
+                    Faith
                 </a>
-                <a class="rows-text medium menu-button" href="#wwd-section">
-                    What we do
-                </a>
-                <a class="rows-text medium menu-button" href="#blog-section">
+                    <a class="rows-text medium menu-button" href="#blog-section">
                     Sneakerblog
                 </a>
-                <a class="rows-text medium menu-button" href="#talk-section">
-                    SoleVibe TV
+                    <a class="rows-text medium menu-button" href="#wwd-section">
+                    Vision
                 </a>
-                <a class="rows-text medium menu-button" href="#dic-section">
+                    <a class="rows-text medium menu-button" href="#dic-section">
                     Dictionary
                 </a>
+                    <a class="rows-text medium menu-button" href="#talk-section">
+                    SoleVibe TV
+                </a>
+                    <a class="rows-text medium menu-button" href="https://snkrgks.com/blog/de/kontakt">
+                    Kontakt
+                </a>
+                </div>
             </div>
-        </div>
         </section>
     </intro>
     <div id="main">
         <div id="header">
             <div class="logo-header" href="#about-section">
                 <a href="#about-section">
-                <img src="img/snkrgks-logo-w.png" >
-                    </a>
-
+                    <img src="img/snkrgks-logo-w.png">
+                </a>
             </div>
             <div class="menu-container horizontal">
-                 <div class="menu-element">
-                    <div class="container-link">
-                <a class="rows-text medium menue-button" href="#about-section">
-                    Belief
-                </a>
-                        </div>
-                    <div class="balc"></div>
-                    </div>
                 <div class="menu-element">
                     <div class="container-link">
-                <a class="rows-text medium menue-button" href="#blog-section">
+                        <a class="rows-text medium menue-button" href="#about-section">
+                    Faith
+                </a>
+                    </div>
+                    <div class="balc"></div>
+                </div>
+                <div class="menu-element">
+                    <div class="container-link">
+                        <a class="rows-text medium menue-button" href="#blog-section">
                     Sneakerblog
                 </a>
-                        </div>
-                    <div class="balc"></div>
                     </div>
+                    <div class="balc"></div>
+                </div>
                 <div class="menu-element">
                     <div class="container-link">
-                <a class="rows-text medium menue-button" href="#wwd-section">
-                    What we do
+                        <a class="rows-text medium menue-button" href="#wwd-section">
+                    Vision
                 </a>
-                        </div>
+                    </div>
                     <div class="balc"></div>
-                    </div >
+                </div>
                 <div class="menu-element">
                     <div class="container-link">
                         <a class="rows-text medium menue-button" href="#dic-section">
                     Dictionary
                         </a>
-                        </div>
-                    <div class="balc"></div>
                     </div>
+                    <div class="balc"></div>
+                </div>
                 <div class="menu-element">
                     <div class="container-link">
-                <a class="rows-text medium menue-button" href="#talk-section">
+                        <a class="rows-text medium menue-button" href="#talk-section">
                     SoleVibe TV
 
                 </a>
                     </div>
-                     <div class="balc"></div>
+                    <div class="balc"></div>
+                </div>
+                <div class="menu-element">
+                    <div class="container-link">
+                        <a class="rows-text medium menue-button" href="https://snkrgks.com/blog/de/kontakt">
+                            Kontakt
+
+                </a>
                     </div>
 
-                <div id="dropdown-menue-element" class="menu-element" >
-                    <div class="container-link menu-icon">
-                    <img src="  img/menu.svg" alt="">
-                    </div>
+                </div>
 
-                     <div id="dropdown" class="dropdown-content">
-                     <a class="rows-text medium menue-button" href="#about-section">
-                    Belief
-                     </a>
-                         <a class="rows-text medium menue-button" href="#wwd-section">
-                    What we do
-                         </a>
-                         <a class="rows-text medium menue-button" href="#blog-section">
-                    Sneakerblog
+                <div id="dropdown-menue-element" class="menu-element">
+                    <div id="dropdown-select" class="container-link menu-icon">
+                        <img src="  img/menu.svg" alt="">
+                    </div>
+                    </div>
+                  <div id="language-select" class="menu-element">
+                    <div id ="language" class="container-link menu-icon">
+                        <p>
+                        <a href="index_en.html">
+                            <img src="img/en.png" alt="" >
                         </a>
-                         <a class="rows-text medium menue-button" href="#dic-section">
+                        </p>
+
+                    </div>
+                    </div>
+                </div>
+                    <div id="dropdown" class="dropdown-content dropdown-select ">
+                        <a class="rows-text medium menue-button" href="#about-section">
+                    Faith
+                     </a>
+                        <a class="rows-text medium menue-button" href="#wwd-section">
+                    Sneakerblog
+                         </a>
+                        <a class="rows-text medium menue-button" href="#blog-section">
+                    Vision
+                        </a>
+                        <a class="rows-text medium menue-button" href="#dic-section">
                     Dictionary
                         </a>
-                         <a class="rows-text medium menue-button" href="#talk-section">
+                        <a class="rows-text medium menue-button" href="#talk-section">
                     SoleVibe TV
                          </a>
+                        <a class="rows-text medium menue-button" href="https://snkrgks.com/blog/de/kontakt">
+                    Kontakt
+                         </a>
+                    </div>
+
+                    <!--<div id="" class="dropdown-content language">
+                        <a class="rows-text medium menue-button" href="index_en.html">
+                                English
+                           </a>
+                        <a class="rows-text medium menue-button" href="index_de.html">
+                                Deutsch
+                           </a>
+                    </div>-->
                 </div>
-
-                </div>
-
-
-            </div>
 
         </div>
         <div id="blog-section" class="main-section texture">
             <!--<div class="slogan-container">-->
-                <!--<div class="rows-grid large-1">
+            <!--<div class="rows-grid large-1">
                     <h2 class="rows-text slogan-text large-1">The most important things are:</h2>
                 </div>-->
-                <div class="description-container">
+            <div class="description-container">
                 <div class="rows-grid small">
-                    <h1 class="titel">. . . drives you forward to:</h1>
+                    <h1 class="titel">sie treibt dich an. . .</h1>
                     <p class="rows-text small">
-                        Wenn sich ein Sneakerhead erstmal in seinem Element befindet und mit Fachwörtern um sich wirft, so löst das schnell verdutzte Blicke bei anderen Leuten aus. Wie so ziemlich jede ‚Subkultur‘ hat auch die Sneakerszene ihr eigenes Vokabular. Wir haben mal die wichtigsten Wörter und Sachverhalte, welche beim Einstieg hilfreich sein können, zusammengetragen. Die Liste wird fortwährend ergänzt werden.
+                        ... aus Turnschuhen mehr als nur ein Konsumgut zu machen. Wir dokumentieren unsere Projekte auf unserem Sneakerblog. Die Kategorien unseres Blogs beziehen sich nicht auf aktuelle Online-Releases, sondern eher auf das, was länger Freude bereitet, als ein Paar neue Schuhe: Leidenschaft.
                     </p>
-                    <button>Sneakerblog</button>
+                    <a class="button" href="https://snkrgks.com/blog/en/">Sneakerblog</a>
                 </div>
             </div>
-           <!-- </div> -->
+            <!-- </div> -->
             <div class="shoes-container">
                 <ul class="cbp-rfgrid">
                     <li>
-                        <a href="#"><img src="img/5.jpg" />
+                        <a href="https://snkrgks.com/blog/de/category/kolumne"><img src="img/snkrgks-category-1.jpg" />
                             <div>
-                                <h3>Felis catus</h3></div>
+                                <h3>Kolumne</h3></div>
                         </a>
                     </li>
                     <li>
-                        <a href="#"><img src="img/6.jpg" />
+                        <a href="https://snkrgks.com/blog/de/category/shooting"><img src="img/snkrgks-category-2.jpg" />
                             <div>
-                                <h3>Felis catus</h3></div>
+                                <h3>Shooting</h3></div>
                         </a>
                     </li>
                     <li>
-                        <a href="#"><img src="img/7.jpg" />
+                        <a href="https://snkrgks.com/blog/de/category/culture-check"><img src="img/snkrgks-category-3.jpg" />
                             <div>
-                                <h3>Felis catus</h3></div>
+                                <h3>Culture Check</h3></div>
                         </a>
                     </li>
                     <li>
-                        <a href="#"><img src="img/8.jpg" />
+                        <a href="https://snkrgks.com/blog/de/category/sneakertalk"><img src="img/snkrgks-category-4.jpg" />
                             <div>
-                                <h3>Felis catus</h3></div>
+                                <h3>Sneaker Talk</h3></div>
                         </a>
                     </li>
                     <li style="float:right">
-                        <a href="#"><img src="img/9.jpg" />
+                        <a href="https://snkrgks.com/blog/de/category/event-recap"><img src="img/snkrgks-category-5.jpg" />
                             <div>
-                                <h3>Felis catus</h3></div>
+                                <h3>Event Recap</h3></div>
                         </a>
                     </li>
                     <li>
-                        <a href="#"><img src="img/10.jpg" />
+                        <a href="https://snkrgks.com/blog/de/category/store-portrait"><img src="img/snkrgks-category-6.jpg" />
                             <div>
-                                <h3>Felis catus</h3></div>
+                                <h3>Store Portrait</h3></div>
                         </a>
                     </li>
                 </ul>
@@ -256,263 +256,253 @@
         </div>
         <div id="wwd-section" class="main-section">
             <div id="kreis-container">
-            <img id="kreis" src="img/kreis4.svg" />
-                <div id="container-speach"> <p id="saying">Wenn sich ein Sneakerhead erstmal in seinem Element befindet und mit Fachwörtern um sich wirft</p>
+                <img id="kreis" src="img/kreis4.svg" />
+                <div id="container-speach">
+                    <p id="saying">Wenn sich ein Sneakerhead erstmal in seinem Element befindet und mit Fachwörtern um sich wirft</p>
                     <p id="author">Arthur Konan Doil</p>
-
-
                 </div>
             </div>
-
             <div class="description-container" id="description-wwd">
                 <div class="rows-grid small">
-                    <h2 class="titel">Attitude</h2>
+                    <h2 class="titel">Ein Blog wie jeder andere?</h2>
                     <p class="rows-text small">
-                        Wenn sich ein Sneakerhead erstmal in seinem Element befindet und mit Fachwörtern um sich wirft, so löst das schnell verdutzte Blicke bei anderen Leuten aus. Wie so ziemlich jede ‚Subkultur‘ hat auch die Sneakerszene ihr eigenes Vokabular. Wir haben mal die wichtigsten Wörter und Sachverhalte, welche beim Einstieg hilfreich sein können, zusammengetragen. Die Liste wird fortwährend ergänzt werden.
-                    </p>
-                    <p class="rows-text small hidden_altitude">
-                        Wenn sich ein Sneakerhead erstmal in seinem Element befindet und mit Fachwörtern um sich wirft, so löst das schne
-                        Wenn sich ein Sneakerhead erstmal in seinem Element befindet und mit Fachwörtern um sich wirft, so löst das schne
-                        Wenn sich ein Sneakerhead erstmal in seinem Element befindet und mit Fachwörtern um sich wirft, so löst das schnell verdutzte Blicke bei anderen Leuten aus. Wie so ziemlich jede ‚Subkultur‘ hat auch die Sneakerszene ihr eigenes Vokabular. Wir haben mal die wichtigsten Wörter und Sachverhalte, welche beim Einstieg hilfreich sein können, zusammengetragen. Die Liste wird fortwährend ergänzt werden.
-                    </p>
-                    <p class="rows-text small hidden_altitude">
-                        Wenn sich ein Sneakerhead erstmal in seinem Element befindet und mit Fachwörtern um sich wirft, so löst das schne
-                        Wenn sich ein Sneakerhead erstmal in seinem Element befindet und mit Fachwörtern um sich wirft, so löst das schne
-                        Wenn sich ein Sneakerhead erstmal in seinem Element befindet und mit Fachwörtern um sich wirft, so löst das schnell verdutzte Blicke bei anderen Leuten aus. Wie so ziemlich jede ‚Subkultur‘ hat auch die Sneakerszene ihr eigenes Vokabular. Wir haben mal die wichtigsten Wörter und Sachverhalte, welche beim Einstieg hilfreich sein können, zusammengetragen. Die Liste wird fortwährend ergänzt werden.
-                    </p>
+                        SNKRGKS ist ein Projekt von Freunden aus Berlin, München und Stuttgart, welches vielseitige Einblicke in die Turnschuhkultur bietet. Die Anzahl an Sneakerblogs steigt und steigt. Ein großer Teil informiert seine Follower über aktuelle Releases und bietet gleich den passenden Shop-Link an. Coole Sache, aber das ist eher nicht so unser Ding, da wir ohnehin wählerisch beim Kauf sind und vermehrt zu älteren Modellen greifen.
+                        </p>
+                       <p class="hidden_altitude"> So ziemlich jede größere Stadt auf der ganzen Welt bietet Anlaufstellen für Turnschuhfans. Wir besuchen unabhängig vom Aufenthaltsort gerne Sneaker-Events, Stores, Release-Events und treffen uns zum Shooting mit Leuten aus den sozialen Netzwerken. Und darüber berichten wir euch.
 
-                    <p class="rows-text small hidden_altitude">
-                        Wenn sich ein Sneakerhead erstmal in seinem Element befindet und mit Fachwörtern um sich wirft, so löst das schne
-                        Wenn sich ein Sneakerhead erstmal in seinem Element befindet und mit Fachwörtern um sich wirft, so löst das schne
-                        Wenn sich ein Sneakerhead erstmal in seinem Element befindet und mit Fachwörtern um sich wirft, so löst das schnell verdutzte Blicke bei anderen Leuten aus. Wie so ziemlich jede ‚Subkultur‘ hat auch die Sneakerszene ihr eigenes Vokabular. Wir haben mal die wichtigsten Wörter und Sachverhalte, welche beim Einstieg hilfreich sein können, zusammengetragen. Die Liste wird fortwährend ergänzt werden.
-                    </p>
-                    <button id="more_altitude">More</button>
-
+                       </p>
+                    <a class="button" id="more_altitude">More</a>
                 </div>
             </div>
             <div id="container-close">
-               <img id="close" src="img/cross.svg" />
+                <svg id="close" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 566.9 566.9" style="enable-background:new 0 0 566.9 566.9;" xml:space="preserve">
+                    <style type="text/css">
+                    .st0 {
+                        fill: #262424;
+                    }
+
+                    .st0:hover {
+                        stroke: white;
+                        stroke-width: 10px;
+                    }
+                    </style>
+                    <path class="st0" d="M283.3,0.3C126.8,0.3,0,127.1,0,283.6s126.8,283.3,283.3,283.3s283.3-126.8,283.3-283.3S439.8,0.3,283.3,0.3z
+     M427.3,403.6l-12,12l-12,12l-120-120l-120,120l-12-12l-12-12l120-120l-120-120l12-12l12-12l120,120l120-120l12,12l12,12l-120,120
+    L427.3,403.6z" />
+                </svg>
             </div>
         </div>
-         <div id="dic-section" class="main-section texture">
-             <div class="description-container">
+        <div id="dic-section" class="main-section texture">
+            <div class="description-container">
                 <div class="rows-grid small">
-                    <h2 class="titel">WE MAKE SNKR DIC</h2>
+                    <h2 class="titel">Das Sneaker Dictionary</h2>
                     <p class="rows-text small">
-                        Wenn sich ein Sneakerhead erstmal in seinem Element befindet und mit Fachwörtern um sich wirft, so löst das schnell verdutzte Blicke bei anderen Leuten aus. Wie so ziemlich jede ‚Subkultur‘ hat auch die Sneakerszene ihr eigenes Vokabular. Wir haben mal die wichtigsten Wörter und Sachverhalte, welche beim Einstieg hilfreich sein können, zusammengetragen. Die Liste wird fortwährend ergänzt werden.
+                        „Was bedeutet eigentlich tts?“ Schon seit Beginn unseres Projekts „snkrgks“ im Jahre 2013 haben wir das Sneaker-Dictionary im Portfolio. Es soll ein Nachschlagewerk für den Fachjargon darstellen und richtet sich daher vorrangig an Neueinsteiger, die von all den Begrifflichkeiten in Social Media-Gruppen und auf Verkaufsplattformen überfordert sind.
                     </p>
-                    <button>Explore</button>
+                    <a class="button" href="https://snkrgks.com/blog/de/dictionary">Schlage das Dictionary auf</a>
                 </div>
             </div>
-             <div id="dic-pic-container">
-                 <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 855.67 455.37">
-  <defs>
-    <style>
-      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
-        fill: #272525;
-      }
+            <div id="dic-pic-container">
+                <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 847.19 443.15">
+                        <defs>
+                            <style>
+                            .cls-1,
+                            .cls-2,
+                            .cls-3 {
+                                isolation: isolate;
+                            }
 
-      .cls-1 {
-        opacity: 0.4;
-      }
+                            .cls-2,
+                            .cls-3,
+                            .cls-4 {
+                                fill: #272525;
+                            }
 
-      .cls-2 {
-        opacity: 0.4;
-      }
+                            .cls-2 {
+                                opacity: 0.35;
+                            }
 
-      .cls-3 {
-        opacity: 0.5;
-      }
+                            .cls-3 {
+                                opacity: 0.5;
+                            }
 
-      .cls-5 {
-        font-size: 36px;
-        font-family: Myriad Pro;
-        fill: #FFFFFF;
-      }
+                            .cls-5 {
+                                font-size: 30px;
+                                opacity: 0;
+                                fill: #ffffff;
+                                font-family: Basic-Regular, Basic;
+                            }
 
-      .cls-6 {
-        letter-spacing: -2px;
-      }
+                            .cls-2:hover,
+                            .cls-3:hover,
+                            .cls-4:hover,
+                            .cls-2:active,
+                            .cls-3:active,
+                            .cls-4:active{
+                                opacity: 0;
+                            }
 
-      .cls-1:hover, .cls-2:hover, .cls-3:hover, .cls-4:hover{
-        opacity: 0;
-      }
-      .cls-5 {
-      opacity: 0;
-      }
+                            .outsole:hover ~ #outsole, .outsole:active ~ #outsole {
+                                opacity: 1;
+                            }
 
-      .outsole:hover ~ #outsole{
-      opacity:1;
-      }
-      .midsole:hover ~ #midsole{
-      opacity:1;
-      }
-      .strap:hover ~ #strap {
-      opacity:1;
-      }
+                            .midsole:hover ~ #midsole, .midsole:active ~ #midsole {
+                                opacity: 1;
+                            }
 
-      .tongue:hover ~ #tongue{
-      opacity:1;
-      }
+                            .strap:hover ~ #strap, .strap:active ~ #strap {
+                                opacity: 1;
+                            }
 
-      .innensocke:hover ~ #innensocke{
-      opacity:1;
-      }
+                            .tongue:hover ~ #tongue, .tongue:active ~ #tongue {
+                                opacity: 1;
+                            }
 
-      .outsole:hover ~ #outsole{
-      opacity:1;
-      }
+                            .innensocke:hover ~ #innensocke, .innensocke:active ~ #innensocke {
+                                opacity: 1;
+                            }
 
-      .upper:hover ~ #upper{
-      opacity:1;
-      }
+                            .outsole:hover ~ #outsole, .outsole:active ~ #outsole {
+                                opacity: 1;
+                            }
 
-      .bubble:hover ~ #bubble{
-      opacity:1;
-      }
+                            .upper:hover ~ #upper, .upper:active ~ #upper {
+                                opacity: 1;
+                            }
 
-      .toebox:hover ~#toebox{
-      opacity:1;
-      }
+                            .bubble:hover ~ #bubble, .bubble:active ~ #bubble {
+                                opacity: 1;
+                            }
 
-      .laces:hover ~#laces
-      {
-      opacity:1;
-      }
+                            .toebox:hover ~#toebox, .toebox:active ~#toebox {
+                                opacity: 1;
+                            }
 
-    </style>
-  </defs>
-  <title>DIC-PIC3</title>
-  <image width="1666" height="871" transform="translate(64.95 27.04) scale(0.47 0.47)" xlink:href="img/am1.png"/>
-  <path class="cls-1 outsole" d="M85.64,364.29l-4.35-15.94,20.29,18.12Q150.72,373.33,202,379c18.29,2,38.37,3.57,78.48,6.94,50.39,4.23,76.3,6.38,111.52,8.39,28.58,1.63,27.91,1.15,48,2.57,49.25,3.46,51.25,6.41,82,7.43a764.56,764.56,0,0,0,78.86-1.64C627,401,661.33,402.43,726.22,386A548.84,548.84,0,0,0,811,357a39.12,39.12,0,0,0,14.49-12.32,38.68,38.68,0,0,0,5.8-12.32l9.42-4.35a27.18,27.18,0,0,1-2.17,19.57,115.14,115.14,0,0,1-37.68,26.09l-50.72,18.12-37,10.14-34.78,5.8-24.64,4.35L624,414.29l-27.54,2.9H565.35l-26.81.72-55.07-2.17-16.67-2.9-50-3.62-31.88-.72-11.59-4.35-37.68-.72L305.2,402l-46.38-2.9-51.45-4.35q-29.65-3.3-60.71-7.72-22.25-3.19-43.64-6.77Z" transform="translate(0 -3.53)"/>
-  <path class="cls-1 upper" d="M87.09,295.45a204.47,204.47,0,0,0,.58-21.12C87.4,263.35,86.42,259,87,251a79.41,79.41,0,0,1,4.67-21.5A21.89,21.89,0,0,1,102,219.67,21.63,21.63,0,0,1,113.67,218c54.5,15,97.09,28.56,126.33,38.33,18,6,33.74,11.54,58.33,19,37.19,11.29,68,18.94,88.33,23.67,15.08-3.06,27.6-6.48,37-9.33,20.2-6.13,30.3-9.2,39.67-14,12-6.16,20.38-12.56,34.67-13.33a53,53,0,0,1,11.67.67l17,9a122.73,122.73,0,0,0,19,36.5,36.84,36.84,0,0,0,24.5-3l26.5-13.5A123.49,123.49,0,0,1,638,288c82.84,5.58,139.67-4.33,139.67-4.33a311,311,0,0,0,43-10.67,30.07,30.07,0,0,1,9.67,8.33c2.79,3.75,3.95,7.23,5.58,12.17a82.8,82.8,0,0,1,3,12.25,123.77,123.77,0,0,1,1.79,22.31l-9.42,4.35A41.62,41.62,0,0,1,811,357l-62.32,9.42-205.07-8-64.49-10.87L288.54,296.9l-171-14.49-21.74,13h-8.7Z" transform="translate(0 -3.53)"/>
-  <path class="cls-3 strap" d="M105.17,153a19.63,19.63,0,0,1,12.5-6.5,182.82,182.82,0,0,1,26.67,10.17c2.4,1.14,7.44,3.59,13.33,7,5.31,3.07,17.06,10.26,35,26.33,14.59,13.07,21.9,19.58,29.5,30a133.82,133.82,0,0,1,18.5,35.67l-127-37.33a21.23,21.23,0,0,0-11.33,1.33,21.6,21.6,0,0,0-10.67,9.83c0.77-10.51,2-21.83,4-33.83A383.85,383.85,0,0,1,105.17,153Z" transform="translate(0 -3.53)"/>
-  <polygon class="cls-1 tongue" points="322.67 112.47 327.17 100.97 363.67 60.47 389.17 39.97 405.67 39.47 438.17 79.97 428.17 85.97 423.67 95.97 395.67 104.47 373.67 98.47 322.67 112.47"/>
-  <polygon class="cls-1 laces" points="456.17 72.47 463.17 70.97 475.17 75.47 494.67 83.97 508.17 95.97 508.67 101.97 501.17 112.47 490.67 114.97 458.17 100.97 455.67 103.97 461.67 111.97 469.17 114.47 476.17 121.47 491.67 125.97 500.67 135.97 515.17 144.47 521.17 152.47 523.17 158.97 545.67 174.97 578.67 190.97 582.67 193.97 577.67 197.97 579.17 202.47 586.17 203.47 593.17 206.97 601.67 199.47 611.67 201.97 620.17 209.97 604.17 229.97 592.67 234.47 585.67 232.47 584.17 222.97 588.17 214.47 574.17 209.97 565.17 209.97 559.17 224.97 551.67 222.97 549.17 206.97 533.17 198.47 522.67 212.97 516.17 212.47 520.67 190.97 509.67 178.97 503.17 187.97 493.67 190.97 486.17 186.47 486.17 176.97 491.17 168.97 468.17 164.97 472.17 179.97 472.67 182.97 468.67 184.97 464.67 183.47 462.67 175.97 458.17 184.47 452.67 185.97 450.17 178.47 455.67 160.97 451.67 158.97 452.17 152.47 447.67 146.97 437.17 160.97 427.17 165.97 424.67 162.47 425.67 150.47 407.67 153.97 394.17 149.97 389.17 126.97 384.67 137.97 371.67 141.47 372.17 131.97 385.17 111.97 395.67 104.47 423.67 95.97 428.17 85.97 438.17 79.97 443.17 78.97 452.67 51.47 461.17 51.47 456.17 72.47"/>
-  <path class="cls-1 innensocke" d="M673.17,245.5a44.59,44.59,0,0,1-12.5,15.5c-12.75,9.82-24.22,6.45-52.67,8.67-46.74,3.64-64.05,16.21-66.67,23.33-0.23.64-.8,2.45-2,2.67-3.38.62-8.54-11.91-12.67-23.67a44.71,44.71,0,0,0-17-9c-22.75-6.08-35.13,11.87-80.33,25.33C412.27,293.42,386.86,299,386.67,299c-28.13-6.3-57.91-14.06-89-23.67-19.67-6.08-38.45-12.45-56.33-19-1.81-4.26-4.35-9.83-7.73-16.18A175.49,175.49,0,0,0,220.67,219c-8.74-11.93-17-19.29-28-29-13.45-11.86-21.44-18.9-34-26.33a164.07,164.07,0,0,0-41-17.17,21.72,21.72,0,0,0-12.5,6.5,165.51,165.51,0,0,0,7.17-23.67c1-4.51,2.16-10.88,6.33-18.33a52.8,52.8,0,0,1,3.67-5.67,10.54,10.54,0,0,1,3-3.67,10.69,10.69,0,0,1,5.83-2.17,55.92,55.92,0,0,1,24.5-2,43.34,43.34,0,0,1,16.5,12.5l19.17,28.67a24.08,24.08,0,0,0,10,9.33,22.91,22.91,0,0,0,6,3.67,29.84,29.84,0,0,0,6.33,1.67c7.27,1.43,6.49,1.74,10.33,2.33a57.34,57.34,0,0,0,14.33.33,59.7,59.7,0,0,0,10.33-2,69.45,69.45,0,0,0,9.67-3.67c8.46-3.71,12.69-5.57,17-7.67,4-1.95,10-5,18-9.33,10.48-5.71,20.26-11.54,29.33-17.33,7.54-2.67,15.66-5.26,24.33-7.67,9.36-2.59,18.28-4.67,26.67-6.33l22,6-10.5,7.5-13,20a12.63,12.63,0,0,0-.5,9.5,18.65,18.65,0,0,0,13-3.5l4.5-11q1.33,6.66,2.83,13.5,1.06,4.81,2.17,9.5a29.46,29.46,0,0,0,13.5,4l18-3.5-1,12,2.5,3.5a14.31,14.31,0,0,0,10-5l10.5-14,4.5,5.5-0.5,6.5,4,2-5.5,17.5a5.16,5.16,0,0,0,2.5,7.5l5.5-1.5,4.5-8.5,2,7.5,4,1.5,4-2-4.5-18,23,4-5,8V190l7.5,4.5,9.5-3,6.5-9,11,12A32.27,32.27,0,0,0,516,208a31.65,31.65,0,0,0,.17,8l6.5,0.5,10.5-14.5,16,8.5a29.18,29.18,0,0,0,2.5,16l7.5,2a33.92,33.92,0,0,0,6-15l11.5,1.5,11.5,3-4,8.5a19.92,19.92,0,0,0,1.5,9.5l7,2a15.39,15.39,0,0,0,7.67-1.67,15.05,15.05,0,0,0,3.83-2.83l16-20-8.5-8-10-2.5-8.5,7.5-7-3.5-7-1-1.5-4.5,5-4,16,5L612,204.33l9.33,8.33V216l10,8.67A179.46,179.46,0,0,0,673.17,245.5Z" transform="translate(0 -3.53)"/>
+                            .laces:hover ~#laces, .laces:active ~#laces {
+                                opacity: 1;
+                            }
 
-  <path class="cls-3 midsole" d="M87.33,296l8.45-.55,21.74-13,171,14.49,190.58,50.72,64.49,10.87,205.07,8L811,357a567.48,567.48,0,0,1-83.33,28.26c-48.91,12.45-88,14.86-126.81,17.39a752.13,752.13,0,0,1-80.19,1.64c-23.93-.84-33.88-3.71-80.68-7.43-5.72-.45-19.44-1.39-46.65-3.23-64.42-4.37-73.34-4.88-95.08-6.49-12.69-.94-39.69-2.71-67.58-5.51q-66.32-6.67-129.09-15.2L81.29,348.35A223.1,223.1,0,0,1,87.33,296Zm95.33,59.25a9.9,9.9,0,0,0,3.75,2c17.24,2.09,32.21,3.62,44.25,4.75,11.71,1.1,25.7,2.39,44.25,3.5,13.44,0.8,24.87,1.24,33.5,1.5a14.26,14.26,0,0,0,3.5-3.75,14.6,14.6,0,0,0,2.25-7.75,12,12,0,0,0-1.25-7.75,12.25,12.25,0,0,0-7.25-5.75l-119.75-7.75a11.93,11.93,0,0,0-5.5,4.5c-3.16,4.9-1.25,10.33-1,11A10.18,10.18,0,0,0,182.67,355.25Z" transform="translate(0 -3.53)"/>
+                            .mudguard:hover ~ #mudguard, .mudguard:active ~ #mudguard {
+                                opacity: 1;
+                            }
 
-  <path class="cls-1 toebox"  d="M716.07,258.33c44.1,6.46,65.43,8.3,74.84,7.92a55.65,55.65,0,0,1,21.5,3,52.66,52.66,0,0,1,8.25,3.75A282,282,0,0,1,784,282c-9.17,1.61-16.67,2.46-26,3.33-18.39,1.72-40.6,3.8-71,4-18,.12-39.24-0.41-63-2.33a107.32,107.32,0,0,0-53.83,18.5A111.61,111.61,0,0,1,556,309a24.08,24.08,0,0,1-5.33.33,23,23,0,0,1-5-.83,34,34,0,0,1-7-11.5,40.42,40.42,0,0,1,9.67-12c6.46-5.4,13.12-7.33,22-9.33A309.84,309.84,0,0,1,614.67,269c7.6-.57,17.85-1.16,30.06-1.33a37.24,37.24,0,0,0,28.44-22.17Z" transform="translate(0 -3.53)"/>
-
-  <path class="cls-1 bubble" d="M178.62,345a11.34,11.34,0,0,1,7.3-10.75L305.67,342a14.14,14.14,0,0,1,2.75,25l-122-9.75A12.93,12.93,0,0,1,178.62,345Z" transform="translate(0 -3.53)"/>
-
-  <text class="cls-5" id="outsole" transform="translate(322.67 446.37)">O<tspan x="24.91" y="0">utsole</tspan></text>
-  <text class="cls-5" id="toebox" transform="translate(699.67 234.47)"><tspan class="cls-6">Toebox</tspan></text>
-  <text class="cls-5" id="strap" transform="translate(7 179.47)">S<tspan x="17.64" y="0">t</tspan><tspan x="29.56" y="0">r</tspan><tspan x="41.15" y="0">ap</tspan></text>
-  <text class="cls-5" id="bubble" transform="translate(0 428.8)">Bubble</text>
-
-
-  <text class="cls-5" id="laces" transform="translate(529.17 142.97)">La<tspan x="34.34" y="0">c</tspan><tspan x="50.25" y="0">es</tspan></text>
-
-  <text class="cls-5" id="upper" transform="translate(659.17 222.97)">Upper</text>
-
-  <text class="cls-5" id="innensocke" transform="translate(76.29 81.3)">I<tspan x="8.96" y="0">nnensocke</tspan></text>
-  <text class="cls-5" id="midsole" transform="translate(694.67 452.13)">M<tspan x="29.38" y="0">idsole</tspan></text>
-  <text class="cls-5" id="tongue" transform="translate(340.33 25.13)"><tspan class="cls-6">T</tspan><tspan x="15.34" y="0">ongue</tspan></text>
-</svg>
-             </div>
-
+                            .heelcap:hover ~ #heelcap, .heelcap:active ~ #heelcap {
+                                opacity: 1;
+                            }
+                            </style>
+                        </defs>
+                        <title></title>
+                        <image class="cls-1" width="1666" height="871" transform="translate(64.17 13.36) scale(0.47)" xlink:href="img/am1.png" />
+                        <path class="cls-2 outsole" d="M87.62,370.24l-3.33-13.81,9.29,11.35,11,6.77c32.76,4.58,34.23,6.09,68.42,9.87,21,4.93,87.89,8.63,128,12,50.39,4.23,58.45,5,93.67,7,28.58,1.63,26.91.58,47,2,49.25,3.46,51.22,7.64,82,8.66,26.3.81,40.29-.09,66.53-2,26.1-1.67,59.87-3.54,124.9-15.76,35.18-6.41,62.53-15.78,90-27.75,1.93-1,1.48-2.93,3.77-5.54,4-4.56,7.87-6.63,10.36-10.12,2.65-3.73,3.07-2.4,4.26-6.81l7.27-7.76,5-2.4c1.75,6.57-.33,16.13-3.47,22.15-5.22,5.44-14.08,12.37-25.06,18.7-11.51,6.63-25.2,12.59-32.45,15.7L748.67,401l-25.8,6.77-25.66,5.07-34.4,6.77L642,421.84l-29.89,2.82-35.24,1.69-31,.56-48.49-1.69-23.68-2-46.8-5.07-29-1.13-25.37-2.8L337.17,412l-37.65-.88-26.68-2.22-56.14-4.45c-19.77-2.21-40.43-5.94-61.14-8.89-14.83-2.13-43.91-2.22-58.95-12Z" transform="translate(-2.78 -22.68)" />
+                        <path class="cls-2 mudguard" d="M836.47,331.55a11.86,11.86,0,0,1-.74,4.42c-.23.66-3.73.83-5,2.4-2.1,2.51-6.7,6.22-7.27,7.76-1.69,4.55-10.52,15-14.62,16.93l-11.88,3.35L783,368.51l-18.62,2.83-17.1,2.24-205.07-8-35.75-4-26.78-5L431.3,344.31l-45.62-15.18-90.43-24.66-174-16.55-21.74,13h0l-8.45.55c.1-1.29-1.25-1.23-1-2.52,1.24-5.82-.82-13.39-1-19.15-.26-11-.47-15.29.1-23.31.55-7.35,2.92-14.6,5.47-21.52a22.66,22.66,0,0,1,10.67-9.84c3.66-1.63,8.38-.43,12.35.11,19.67,5.41,38.85,12.66,54.91,17.29,28.46,8.21,50.64,16.21,69.32,22.45,18,6,33.51,11.34,58.1,18.8,23.52,7.14,47.25,14.15,64.55,17.68,10.06,2.05,16,1.27,23.51,3,15.08-3.06,31.35-4.86,40.75-7.71,20.2-6.13,26.81-10.34,36.18-15.14,6.76-3.47,14.08-6.08,20.9-8.68A55.51,55.51,0,0,1,503,269.41c3.9-.21,4.25.16,8,.9,3.94,1.2,6.69,3.42,9.92,6,1.6,1.28,3.24,4.44,4.51,6,1.25,1.93,2.86,6.11,5,10.11,3.81,7,2.76,9.38,6,15.11,1.23,4.29,1.94,5.31,5.31,8.07,3.08.69,7.19,2,11.23,1.63,6.8-.67,13.83-5,18.58-7.35l26.51-12.42c13.51-2.07,26.46-4.1,40.37-3.09,82.84,5.58,140.83-3.46,140.83-3.46a245.34,245.34,0,0,0,38.16-9.56c3.78,2.05,5.71,4.5,8.3,7.93,2.79,3.75,3.3,5.58,4.93,10.52a123.56,123.56,0,0,1,3.37,15,85.51,85.51,0,0,1,1.66,15.41" transform="translate(-2.78 -22.68)" />
+                        <path class="cls-3 heelcap" d="M108.17,158.47a19.63,19.63,0,0,1,12.5-6.5,182.82,182.82,0,0,1,26.67,10.17c2.4,1.14,6.86,5.7,12.75,9.11,5.31,3.07,16.84,10.17,34.78,26.24,14.59,13.07,20.14,21.37,27.74,31.79,3.77,5.47,14,23,19.32,35.69L116.67,223.8a21.23,21.23,0,0,0-11.33,1.33A21.6,21.6,0,0,0,94.67,235c.23-3.11-1.25-5-.93-8.24.75-7.73,3.53-17.14,4.93-25.59A383.85,383.85,0,0,1,108.17,158.47Z" transform="translate(-2.78 -22.68)" />
+                        <path class="cls-2 tongue" d="M349.08,114.47l-24.33,7.67c.14-.18,0-.27-.25-.35a5.17,5.17,0,0,1-1-.32.44.44,0,0,1-.27-.42c.09-1.34,2-3.79,2.4-5.17.71-2.19,3-3.83,4.56-6.33,5.3-8.66,13.86-18.42,18.17-23.41q7.53-8.7,15-17,3.63-3.31,7.67-6.67A214.2,214.2,0,0,1,389.24,49a32.19,32.19,0,0,1,16.5-.5c4.38,4.62,7.53,11.58,12,17,6.81,8.17,13.76,14.72,19.72,23.54l-10,6L423,105,393,114.54l-17.29-6.4Z" transform="translate(-2.78 -22.68)" />
+                        <path class="cls-2 laces" d="M453.84,81.82,462.46,80l12,4.5L493,93.52c3.85,1.07,6.66,4.2,9.34,7.16,1.74,2,3.64,3.12,4.54,5.58l-.26,4.67c-1.54,4.09-2.72,6.55-6.09,9.34-1.23.67-2.56,2.45-3.88,2.89a14.14,14.14,0,0,1-5,1c-1.25,0-5.11.17-6.29-.26l-22.56-10.63-7.65-1.82L454,114.13l6.19,7.95,8.69,3.37,7.78,7.26,7.78.26,6.09,4.8,11.36,10.76c3.56,1.09,3,.08,6.08,2.19a62,62,0,0,1,5.83,4.86c2.87,1.89,4.09,5,5.11,8.27l3.4,6.81,6.32,5.11,10.45,6.08,8.51,12.64,26.84,5.24,3.77,4.94-4.46,4.89,3.29,2.65,6.76,2.21,6.91,3.11,8.38-7.4,9.53,1.82c1.39,1.07,7.19,7.86,6.31,9.69l-2.17,4.5L605,235.2c-1.65,1.13-4.41,5.1-7.37,7.37a15.9,15.9,0,0,1-8.43,3.16l-5.06-2.26-2.95-9.28,4.42-8.47-13-3.76-9.73-2.35-5.25,14.19c-.81.46-1,2.05-1.91,2-1.23,0-7.54-.5-8-1.65-1.73-4.39-1-13.07-.21-17.73l-17.7-8.22c-2,5-7.75,15.28-9.27,15.17-1.18-.15-5.78,1.83-6.53.91a78.45,78.45,0,0,1,.42-11,33.73,33.73,0,0,1,4-13.27c-1.83-5.36-6.19-9.26-11.38-11.55l-6.32,8.81-10.11,5.06-6.74-5.27L485.36,187l3.37-7.8-22.33-4,2.66,13.31.71,3.54-2.31,2.68-3.8.06-2.53-7.16-6.38,8.06-3.94.16c-1.46-.68-1.39-2.79-1.84-4.33a5.49,5.49,0,0,1,.5-4L455.23,172,451,168l-1.21-5-3.37-5.69L436.46,170l-10,5-3.26-2.34,1-11.79-14.42,2.8L393.46,159l-3.88-18.26L384,147l-13,3.5,1-13.29,11.43-15.71,9.62-6.93L423,105l4.5-10,10-6,5-1,7.07-22.85L452,60.47l5.59.4,1.74,1.45Z" transform="translate(-2.78 -22.68)" />
+                        <path class="cls-2 upper" d="M666.86,253.85c0,3.8,0,6.58-5.29,10.74-7.87,6.06-14.8,8.07-25.63,9.24-6.73.73-15,1.13-25.86,2-46.74,3.64-62.46,17.87-68.93,23.13-.23.64-3.64,3.83-6,5.85a200.88,200.88,0,0,0-9.66-22.47c-2.44-4.77-8-9.11-13.37-11.86-8.38-2.46-17.66-.35-26.15,2.47a145.35,145.35,0,0,0-20.49,8.46c-2.58,1.29-5.38,2.91-8.11,4.22-8.37,4-15.27,7.75-26.59,10.94a129.52,129.52,0,0,1-21.61,4.73c-10.45,1.54-17.86,3-17.86,3l-4.08.8c-6.44-1.44-11.69-1.21-18.53-2.15s-13.82-3.08-20.74-4.53c-16.14-3.37-32-8.82-48.79-14-19.67-6.08-40.22-12.25-58.1-18.8-1.81-4.26-3.79-8.58-7.17-14.93-3.81-7.35-7.34-14-12.15-20.76-8.74-11.93-16.74-22.08-27.74-31.79-13.45-11.86-22.22-18.81-34.78-26.24-5-2.92-7.81-6.34-12.75-9.11-7.83-4.39-17.85-7.82-26.67-10.17a21.72,21.72,0,0,0-12.5,6.5,165.51,165.51,0,0,0,7.17-23.67c1-4.51,2.16-10.88,6.33-18.33a52.8,52.8,0,0,1,3.67-5.67,10.54,10.54,0,0,1,3-3.67,10.69,10.69,0,0,1,5.83-2.17,55.92,55.92,0,0,1,24.5-2,43.34,43.34,0,0,1,16.5,12.51l19.17,28.67a24.08,24.08,0,0,0,10,9.33,22.91,22.91,0,0,0,6,3.67,29.84,29.84,0,0,0,6.33,1.67c7.27,1.43,6.49,1.74,10.33,2.33a57.34,57.34,0,0,0,14.33.33,59.7,59.7,0,0,0,10.34-2,69.45,69.45,0,0,0,9.67-3.67c8.46-3.71,12.69-5.57,17-7.67,4-1.95,8.22-5.73,16.22-10.06.82-.45,3-1.59,3.83-2,9-5,17.82-10.75,25.8-15.64.12-.08.14.3.27.42s.73.08,1,.32.11.44.25.35c7.54-2.67,15.66-5.26,24.33-7.67,9.36-2.59,18.28-4.67,26.67-6.33l17.29,6.4-9.62,6.93L372,137.18c-1.4,3-3,10.28-1.91,13.4,4.62.49,9.6.28,13.35-2.46l6.16-7.4c.89,4.44.54,6.7,1.54,11.26.71,3.21,4.39,4.55,5.13,7.67a29.46,29.46,0,0,0,13.5,4l14.42-2.8-1,11.79,3.37,2.74c3.87-.24,7.38-2.52,9.9-5.48l9.9-12.64,3.37,5.69,1.05,5.48,4.42,3.58-5.48,15.17c-1.49,2.43-1.37,7.15,1.05,8.64.26.16,3.66-.27,3.94-.16l2.59-2.58,3.79-5.48,2.53,7.16,3.8-.06,2.31-2.68-3.37-16.85,22.33,4-3.37,7.8-1.47,10.11,6.74,5.27,10.11-5.06,6.32-8.81c5.71,3,8.51,6,11.38,11.55-2.55,4.09-3.47,8.48-4,13.27-.28,2.66-.82,8.37-.42,11l6.53-.91,9.27-15.17,17.7,8.22c-.69,5.46-2.12,12.74.21,17.73l8,1.65c3.18-4.44,6.4-10.81,7.16-16.22l13.06,3.16,9.69,2.95-4.42,8.47a22.1,22.1,0,0,0,2.95,9.28l5.06,2.26c2.66.12,6.06-1.95,8.43-3.16a17.14,17.14,0,0,0,3.79-3.37l3.58-4L616.25,246l6.42,2.63,5.43-3,.76-3.47-1.75-4.1-14.35-12,2.17-4.5L630,234.18C643,242.92,663.34,248.07,666.86,253.85Z" transform="translate(-2.78 -22.68)" />
+                        <path class="cls-3 midsole" d="M91,301.47l8.45-.55,21.74-13,174,16.55,90.43,24.66,45.62,15.18,48.38,12.22,26.78,5,39.7,3.83c36.51,1.14,45.06,2.23,76.89,3.35l36.44,1.42c36.19,1.27,56.32,2.2,87.79,3.42l49.64-7.17,11.88-3.35L805,368.59c-12.72,3.34-13.8,5.6-25.95,9.84-16.33,6.4-24.85,9.95-42.85,13.32-4.89.91-10,2.86-21.16,4.59-7.49,1.16-11.84,2.66-18.2,3.7-28.53,4.67-48.87,7.67-63.2,9.06-6,.58-22.26,2.09-43.5,3,0,0-18.65,2-41.53,2-4.61,0-10.48.35-20.86,0h-4.14c-34.67-1.24-49.37-6.22-82-8.66-18.91-1.42-14.07-.31-47-2-38.78-2-69-4.74-93.67-7-33.47-3.07-38.32-3.79-73.38-5.27-33.79-3-34.6-4.56-54.62-6.73-17.75-1.93-41-5-68.42-9.87l-11-6.77-9.29-11.35C84.23,338.81,87,318.62,91,301.47Zm92.29,62.07c1.09.93,4.72,1.42,6.1,1.81,17.25,2.09,32.25,3.62,44.25,4.75,11.71,1.1,25.7,2.39,44.25,3.5,13.44.8,21.31,1.24,29.94,1.5,1.38-1,4.42-5.29,5.35-6.74,1.46-2.32.92-.94.93-3.69a13.26,13.26,0,0,0-1.69-8.08c-1.57-2.79-.37-3.33-3.45-4.23l-122.41-10c-2.25.91-5.9,6.71-7.23,8.74C180.46,358.72,181.67,362.1,183.32,363.54Z" transform="translate(-2.78 -22.68)" />
+                        <path class="cls-2 toebox" d="M709.32,264.19c36.18,2.82,60.07,7.4,72,8.39,7.21.49,15.47-.17,22.23,2.38,3,.67,5.42.49,6.71,1.4,2.91,2,5.6,4.15,7.17,5-11.75,4.1-25.94,7.23-38.16,9.56-8.93,1.68-29,3-38,3.74-24.17,2.24-35.82,1.16-60.56,1.3-15.92.09-17.87-.91-42.24-1.58-6.46-.53-18.83-.27-25.2.92-3.41.58-11.92,1-15.16,2.17a176.46,176.46,0,0,0-22.16,10.38c-2.93,1.62-7.53,3.65-8.91,4.41-7.63,3.88-11.7,5-14,5a28.91,28.91,0,0,0-3.12,0c-2.82.14-6-1.51-8.11-1.63a25.26,25.26,0,0,1-3.52-3.56c-1.24-2.26-1.11-2.78-3.15-7.25,3-4.88,10.87-9,15.38-12.53,6.21-4.78,16.48-8.85,26.12-11,14.6-3.29,18.56-4.28,33.47-5.43,7.6-.57,13.65-1.81,25.86-2,5.9-.27,12.43-2,19.45-5.2,2.75-1.25,4-2.59,6.18-4a11.23,11.23,0,0,0,5.29-10.74L663.77,251l10.87,4.14Z" transform="translate(-2.78 -22.68)" />
+                        <path class="cls-2 bubble" d="M179.36,353.1a11.34,11.34,0,0,1,7.23-10.75l118.55,7.75a14.2,14.2,0,0,1,2.72,25l-120.78-9.75A12.94,12.94,0,0,1,179.36,353.1Z" transform="translate(-2.78 -22.68)" />
+                        <path class="cls-4" d="M663.34,262.8" transform="translate(-2.78 -22.68)" />
+                        <path class="cls-4" d="M830,304.47" transform="translate(-2.78 -22.68)" />
+                        <text class="cls-5 " id="upper" transform="translate(703.82 191.02)">Upper</text>
+                        <text class="cls-5 " id="mudguard" transform="translate(683.82 191.02)">Mudguard</text>
+                        <text class="cls-5 " id="laces" transform="translate(532.31 116.53)">Laces</text>
+                        <text class="cls-5 " id="tongue" transform="translate(272.45 24.95)">Tongue</text>
+                        <text class="cls-5 " id="heelcap" transform="translate(30 55.1)">Heelcap</text>
+                        <text class="cls-5 " id="midsole" transform="translate(10.41 399.17)">Midsole</text>
+                        <text class="cls-5 " id="bubble" transform="translate(131.45 422.73)">Air Bubble</text>
+                        <text class="cls-5 " id="outsole" transform="translate(292.42 435.72)">Outsole</text>
+                        <text class="cls-5 " id="toebox" transform="translate(681.81 225.95)">Toebox</text>
+                    </svg>
+            </div>
         </div>
         <div id="talk-section" class="main-section">
-
-            <video id="bgvid" playsinline autoplay muted loop>
+            <video id="bgvid" controls="false" playsinline autoplay muted loop>
                 <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
-                <source src="videos/Culture%20Check.mov" type="video/webm">
-                <source src="videos/Culture%20Check.mov" type="video/mov">
+                <source src="videos/Culture%20Check.mp4" type="video/mp4">
+                <source src="videos/Culture%20Check.mp4" type="video/mov">
             </video>
             <div id="video-cover">
-            <div class="description-container">
-                <div class="rows-grid  small">
-                    <h2 class="titel">WE MAKE SNKR TALKS</h2>
-                    <p class="rows-text small">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                    </p>
-                     <button>SoleVibe TV</button>
+                <div class="description-container">
+                    <div class="rows-grid  small">
+                        <h2 class="titel">WIR REDEN VON KULTUR</h2>
+                        <p class="rows-text small">
+                            Egal wo wir gerade sind – wir schauen in unseren Heimatstädten oder auf Reisen immer nach, ob es Anlaufstellen gibt, um Gleichgesinnte zu treffen. Unsere YouTube-Show „SoleVibe TV“ verpackt die gesammelten Eindrücke in eine Videoreihe. Die Show bietet euch Culture Talks, Sneaker Talks, Event Recaps und auch mal „spaßigere“ Episoden.
+                        </p>
+                        <a class="button" href="https://snkrgks.com/blog/de/tv">SoleVibe TV</a>
+                    </div>
                 </div>
             </div>
-            </div>
-            <!--<div class="vid-container">
-                <iframe class="video" src="http://www.youtube.com/embed/Sdyh8pltvQQ" width="640" height="385" frameborder="0">
-                    <br />
-                </iframe>
-            </div>
-        </div>-->
         </div>
         <div class="footer">
             <div id="container-footer">
                 <div class="container-img-legal">
-            <div class="logo-footer">
-                <img src="img/snkrgks-hua.png">
-            </div>
-            <div class="legal menu-container vertical">
-                <h4>Legal</h4>
-                <ul>
-                    <li class="rows-text small">Disclaimer</li>
-                    <hr />
-                    <li class="rows-text small">Impressum</li>
-                    <hr />
-                    <li class="rows-text small">Privacy</li>
-
-                </ul>
-
-
-                <!--
-                <a class="rows-text small" href="">
-                     \009B Disclaimer
-                </a>
-                <a class="rows-text small" href="">
-                    Impressum
-                </a>
-                <a class="rows-text small" href="">
-                    Privacy
-                </a>-->
-
-            </div>
-
+                    <div class="logo-footer footer-content">
+                        <img src="img/snkrgks-hua.png">
                     </div>
+                    <div class="footer-content">
+                        <h4>SNKRGKS on Facebook</h4>
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsnkrgks%2F&tabs&width=180&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=1834163186865591" width="" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                    </div>
+                    <div class="footer-content">
+                        <h4>SNKRGKS on Instagram</h4>
+                        <!-- LightWidget WIDGET -->
+                        <script src="https://lightwidget.com/widgets/lightwidget.js"></script>
+                        <iframe  id="social-media" src="https://lightwidget.com/widgets/2e2a40ff0d56508f8912b01cbd7668db.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+                        </div>
+                    <div class="footer-content">
+                        <h4>SNKRGKS on Snapchat</h4>
+                        <img src="img/snapcode-snkrgks.png">
+                    </div>
+                    <div class="legal menu-container vertical footer-content">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a class="rows-text small" href="https://snkrgks.com/blog/de/impressum">Impressum</a></li>
+                            <hr />
+                            <li><a class="rows-text small" href="https://snkrgks.com/blog/de/datenschutz">Datenschutz</a></li>
+                            <hr />
+                            <li><a class="rows-text small" href="https://snkrgks.com/blog/de/disclaimer">Disclaimer</a></li>
+                            <hr />
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div id="footer-footer">
                 <div id="container-rights">
                     Copyright 2016 <b>SNKRGKS</b> | All Rights Reserved | Powered by Ruby Racoon Media
-
                 </div>
-
-
-                </div>
-
+            </div>
         </div>
+    </div>
+    <!--main-->
+</div>
+    <script src="https://cdn.rawgit.com/pixelass/onwheel-fix/v0.3.3/dist/onwheel-fix.min.js" />
+    <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/texts.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/smoothscroll.js"></script>
 
-        </div> <!--main-->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script src="https://cdn.rawgit.com/pixelass/onwheel-fix/v0.3.3/dist/onwheel-fix.min.js"/>
-        <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
-        </script>
-        <script src="js/plugins.js"></script>
-        <script src="js/texts.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/smoothscroll.js"></script>
+    ga('create', 'UA-86746627-1', 'auto');
+    ga('send', 'pageview');
+    </script>
 
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-        (function(b, o, i, l, e, r) {
-            b.GoogleAnalyticsObject = l;
-            b[l] || (b[l] =
-                function() {
-                    (b[l].q = b[l].q || []).push(arguments)
-                });
-            b[l].l = +new Date;
-            e = o.createElement(i);
-            r = o.getElementsByTagName(i)[0];
-            e.src = 'https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e, r)
-        }(window, document, 'script', 'ga'));
-        ga('create', 'UA-XXXXX-X', 'auto');
-        ga('send', 'pageview');
-        </script>
 </body>
 
 </html>
