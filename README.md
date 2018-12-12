@@ -1,1 +1,1 @@
-Code related to sneaker blog SNKRGLS https://snkrgks.com.
+Code related to sneaker blog SNKRGKS https://snkrgks.com.
